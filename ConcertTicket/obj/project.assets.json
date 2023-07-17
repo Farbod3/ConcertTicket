@@ -107,6 +107,74 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
+      "Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Common": "1.0.0",
+          "Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      },
+      "Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Common": "1.0.0",
+          "Data": "1.0.0",
+          "Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.dll": {}
+        }
+      },
+      "WebFramework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Common": "1.0.0",
+          "Data": "1.0.0",
+          "Entities": "1.0.0",
+          "Service": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebFramework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebFramework.dll": {}
+        }
       }
     }
   },
@@ -451,12 +519,42 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "path": "../Data/Data.csproj",
+      "msbuildProject": "../Data/Data.csproj"
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "Service/1.0.0": {
+      "type": "project",
+      "path": "../Service/Service.csproj",
+      "msbuildProject": "../Service/Service.csproj"
+    },
+    "WebFramework/1.0.0": {
+      "type": "project",
+      "path": "../WebFramework/WebFramework.csproj",
+      "msbuildProject": "../WebFramework/WebFramework.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Common >= 1.0.0",
+      "Data >= 1.0.0",
+      "Entities >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.0",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Service >= 1.0.0",
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "WebFramework >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -490,7 +588,23 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj"
+            },
+            "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj"
+            },
+            "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Service\\Service.csproj"
+            },
+            "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\WebFramework\\WebFramework.csproj": {
+              "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\WebFramework\\WebFramework.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

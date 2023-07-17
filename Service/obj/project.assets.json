@@ -1,11 +1,69 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
+      "Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Common": "1.0.0",
+          "Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "path": "../Data/Data.csproj",
+      "msbuildProject": "../Data/Data.csproj"
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Common >= 1.0.0",
+      "Data >= 1.0.0",
+      "Entities >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\IT LAND\\.nuget\\packages\\": {},
@@ -38,7 +96,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj"
+            },
+            "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj"
+            },
+            "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -4,6 +4,263 @@
     "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\WebFramework\\WebFramework.csproj": {}
   },
   "projects": {
+    "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\IT LAND\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\IT LAND\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj",
+        "projectName": "Data",
+        "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\IT LAND\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\IT LAND\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj"
+              },
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\IT LAND\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\IT LAND\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\IT LAND\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\IT LAND\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj"
+              },
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj"
+              },
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\WebFramework\\WebFramework.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +288,20 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Common\\Common.csproj"
+              },
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Data\\Data.csproj"
+              },
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Service\\Service.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
