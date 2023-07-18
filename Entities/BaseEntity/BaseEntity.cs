@@ -1,6 +1,7 @@
-﻿namespace Entities.BaseEntity;
+﻿namespace Entities;
 
-public class BaseEntity
+public class BaseEntity : BaseEntity<long> {}
+public class BaseEntity<TKey> : IBaseEntity
 {
-    
+    public TKey Id { get; set; }
 }

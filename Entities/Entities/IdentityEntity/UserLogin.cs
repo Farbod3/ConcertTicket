@@ -1,4 +1,4 @@
-﻿using Entities.BaseEntity;
+﻿using Entities;
 using Microsoft.AspNetCore.Identity;
 
 namespace Entities;

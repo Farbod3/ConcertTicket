@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 using Data.MyAppDbContext;
 using Data.Repository.IGenericRepository;
-using Entities.BaseEntity;
+using Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repository.GenericRepository;
