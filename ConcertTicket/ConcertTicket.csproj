@@ -17,8 +17,6 @@
 
     <ItemGroup>
       <Folder Include="Controllers\" />
-      <Folder Include="Models\DtoSelect\" />
-      <Folder Include="Models\DTOs\" />
       <Folder Include="View\" />
     </ItemGroup>
 

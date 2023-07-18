@@ -17,7 +17,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class, IBase
 
     public void Add(T entity)
     {
-        throw new NotImplementedException();
+        
     }
 
     public Task AddAsync(T entity, CancellationToken cancellationToken)
