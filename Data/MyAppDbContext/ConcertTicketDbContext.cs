@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.MyAppDbContext;
 
-public class AppDbContext : IdentityDbContext<User,Role,long,UserClaim,UserRole,UserLogin,RoleClaim,UserToken>
+public class ConcertTicketDbContext : IdentityDbContext<User,Role,long,UserClaim,UserRole,UserLogin,RoleClaim,UserToken>
 {
-    public AppDbContext(DbContextOptions options) : base(options)
+    public ConcertTicketDbContext(DbContextOptions<ConcertTicketDbContext> options) : base(options)
     {
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)

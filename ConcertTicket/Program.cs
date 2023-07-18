@@ -1,6 +1,8 @@
+using Data.MyAppDbContext;
 using Data.Repository.GenericRepository;
 using Data.Repository.IGenericRepository;
 using Microsoft.Extensions.FileProviders;
+using WebFramework.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,10 +12,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped (typeof(IGenericRepository<>),typeof(GenericRepository<>));
+builder.Services.AddScoped (typeof(IRepository<>),typeof(Repository<>));
 // builder.Services.AddDbContext<AppDbContext>(p =>
 //     p.Use(builder.Configuration.GetConnectionString("")));
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(typeof(ICustomMapping));
+var cs = builder.Configuration.GetConnectionString("sqlite")!;
+builder.Services.AddSqlite<ConcertTicketDbContext>(cs);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
