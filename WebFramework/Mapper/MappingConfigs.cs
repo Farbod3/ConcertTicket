@@ -7,8 +7,15 @@ public class MappingConfigs : Profile
 {
     public MappingConfigs()
     {
-        var allTypes = Assembly.GetEntryAssembly()!.GetExportedTypes()
+        var AllTypes = Assembly.GetEntryAssembly()!.GetExportedTypes()
             .Where(p =>
                 p.IsClass && p.IsPublic && !p.IsAbstract && p.GetInterfaces().Contains(typeof(ICustomMapping)));
+        
+        foreach (var type in AllTypes)
+        {
+            var Dto = Activator.CreateInstance(type) as ICustomMapping;
+
+            Dto!.ApplyMapping(this);
+        }
     }
 }

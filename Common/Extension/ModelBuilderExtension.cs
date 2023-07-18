@@ -5,13 +5,13 @@ namespace Common.Extension;
 
 public static class ModelBuilderExtension
 {
-   public static void AddAllEntities<TBase>(ModelBuilder modelBuilder, params Assembly[] assemblies)
+   public static void AddAllEntities <TBase>(this ModelBuilder modelBuilder, params Assembly[] assemblies)
     {
       
       
-        var entityTypes = Assembly.GetExecutingAssembly().GetTypes()
-            .Where(t => t.IsClass && !t.IsAbstract && !t.IsGenericType && typeof(TBase)
-                .IsAssignableFrom(t));
+        var entityTypes = assemblies.SelectMany(x => x.GetExportedTypes())
+            .Where(y => y is { IsPublic: true, IsAbstract: false } && typeof(TBase)
+                            .IsAssignableFrom(y) && y.IsSubclassOf(typeof(TBase)));
         foreach (var entityType in entityTypes)
         {
             modelBuilder.Entity(entityType);
