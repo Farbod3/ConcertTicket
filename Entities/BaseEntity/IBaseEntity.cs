@@ -1,6 +1,6 @@
 ﻿namespace Entities.BaseEntity;
 
-public class BaseEntity
+public interface IBaseEntity
 {
     
 }
