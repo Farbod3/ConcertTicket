@@ -14,8 +14,9 @@ public class
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(IBaseEntity).Assembly);
         var assemblies = typeof(IBaseEntity).Assembly;
         modelBuilder.AddAllEntities<IBaseEntity>(assemblies);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(IBaseEntity).Assembly);
+
     }
 }
