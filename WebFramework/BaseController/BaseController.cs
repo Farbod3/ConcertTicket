@@ -5,5 +5,4 @@ namespace WebFramework.BaseController;
 [Route("[controller]/[action]")]
 public class BaseController : ControllerBase
 {
-    
 }
