@@ -1,7 +1,9 @@
-﻿
-namespace WebFramework.BaseController;
+﻿using Microsoft.AspNetCore.Mvc;
 
-public class BaseController 
+namespace WebFramework.BaseController;
+[ApiController]
+[Route("[controller]/[action]")]
+public class BaseController : ControllerBase
 {
     
 }
