@@ -798,6 +798,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.5",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Identity.Stores": "7.0.5"
         },
         "compile": {
@@ -817,6 +818,7 @@
           "Entities": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.5",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Identity.Stores": "7.0.5"
         },
         "compile": {
@@ -835,6 +837,7 @@
           "Common": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.5",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Identity.Stores": "7.0.5"
         },
         "compile": {
@@ -855,6 +858,7 @@
           "Entities": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.5",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Identity.Stores": "7.0.5"
         },
         "compile": {
@@ -869,12 +873,12 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Common": "1.0.0",
           "Data": "1.0.0",
           "Entities": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.5",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Identity.Stores": "7.0.5",
           "Service": "1.0.0"
         },
@@ -2174,7 +2178,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper >= 12.0.1",
-      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "Common >= 1.0.0",
       "Data >= 1.0.0",
       "Entities >= 1.0.0",
@@ -2183,6 +2186,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
+      "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Identity.Stores >= 7.0.5",
       "Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
@@ -2253,10 +2257,6 @@
             "target": "Package",
             "version": "[12.0.1, )"
           },
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-            "target": "Package",
-            "version": "[12.0.1, )"
-          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.5, )"
@@ -2280,6 +2280,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.5, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "Microsoft.Extensions.Identity.Stores": {
             "target": "Package",

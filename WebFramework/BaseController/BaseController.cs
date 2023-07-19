@@ -1,6 +1,7 @@
-﻿namespace WebFramework.BaseController;
+﻿
+namespace WebFramework.BaseController;
 
-public class BaseController
+public class BaseController 
 {
     
 }

@@ -3,7 +3,7 @@ using Data.Repository.GenericRepository;
 using Data.Repository.IGenericRepository;
 using Microsoft.Extensions.FileProviders;
 using WebFramework.Mapper;
-
+using WebFramework.ServiceExtension;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,14 +13,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped (typeof(IRepository<>),typeof(Repository<>));
-// builder.Services.AddDbContext<AppDbContext>(p =>
-//     p.Use(builder.Configuration.GetConnectionString("")));
+
 builder.Services.AddAutoMapper(typeof(ICustomMapping));
+
 var cs = builder.Configuration.GetConnectionString("sqlite")!;
 builder.Services.AddSqlite<ConcertTicketDbContext>(cs);
 
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
