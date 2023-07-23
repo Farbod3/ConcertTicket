@@ -1,10 +1,9 @@
-﻿using Entities.Entities.Tickets;
+﻿using Entities.Tickets;
 
-namespace Entities.Entities.Programs;
+namespace Entities.Programs;
 
 public class Programs : BaseEntity
 {
-    public IEnumerable<Archive.Archive>? Tickets { get; set; }
     public List<Archive.Archive> Archives { get; set; }
     
 }

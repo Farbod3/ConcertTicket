@@ -1,4 +1,4 @@
-﻿namespace Entities.Entities.Support;
+﻿namespace Entities.Support;
 
 public class Support : BaseEntity
 {

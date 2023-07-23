@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities.Concerts;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Entities.Entities.Tickets;
+namespace Entities.Tickets;
 
 public class Ticket : BaseEntity
 {
@@ -14,12 +15,15 @@ public class Ticket : BaseEntity
     public City.City City { get; set; }
     public long SingerId { get; set; }
     public Singer.Singer Singer { get; set; }
+    
     public long UserId { get; set; }
     public User User { get; set; }
-    public long ArchiveId { get; set; }
-    public Archive.Archive Archive { get; set; }
+    
     public long ConcertId { get; set; }
-    // public Concerts.Concerts Concerts { get; set; }
+    public Concert Concert { get; set; }
+    
+    public long ReservationId { get; set; }
+    public Reservation.Reservation Reservation { get; set; }
 }
 
 public class TicketTypeConfiguration : IEntityTypeConfiguration<Ticket>
@@ -33,8 +37,15 @@ public class TicketTypeConfiguration : IEntityTypeConfiguration<Ticket>
         builder.HasOne(g => g.Singer)
             .WithMany(h => h.Tickets)
             .HasForeignKey(i => i.SingerId);
-        // builder.HasOne(j => j.Concerts)
-        //     .WithMany(k => k.Tickets)
-        //     .HasForeignKey(l => l.ConcertId);
+        builder.HasOne(j => j.Concert)
+            .WithMany(k => k.Tickets)
+            .HasForeignKey(l => l.ConcertId);
+        builder.HasOne(m => m.User)
+            .WithMany(n => n.Tickets)
+            .HasForeignKey(o => o.UserId);
+        builder.HasOne(p => p.Reservation)
+            .WithMany(q => q.Tickets)
+            .HasForeignKey(r => r.ReservationId);
+
     }
 }
