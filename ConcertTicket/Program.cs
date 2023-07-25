@@ -4,6 +4,7 @@ using Data.Repository.IGenericRepository;
 using Microsoft.Extensions.FileProviders;
 using WebFramework.Mapper;
 using WebFramework.ServiceExtension;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -38,6 +39,7 @@ app.UseFileServer(new FileServerOptions
 
 
 app.UseHttpsRedirection();
+
 
 app.UseAuthorization();
 

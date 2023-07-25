@@ -1,8 +1,8 @@
-﻿using Entities.Concerts;
+﻿using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Entities.Tickets;
+namespace Entities;
 
 public class Ticket : BaseEntity
 {
@@ -12,9 +12,9 @@ public class Ticket : BaseEntity
     public int Price { get; set; }
 
     public long CityId { get; set; }
-    public City.City City { get; set; }
+    public City City { get; set; }
     public long SingerId { get; set; }
-    public Singer.Singer Singer { get; set; }
+    public Singer Singer { get; set; }
     
     public long UserId { get; set; }
     public User User { get; set; }
@@ -23,7 +23,7 @@ public class Ticket : BaseEntity
     public Concert Concert { get; set; }
     
     public long ReservationId { get; set; }
-    public Reservation.Reservation Reservation { get; set; }
+    public Reservation Reservation { get; set; }
 }
 
 public class TicketTypeConfiguration : IEntityTypeConfiguration<Ticket>

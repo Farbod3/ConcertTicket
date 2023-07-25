@@ -1,16 +1,15 @@
-﻿using Entities.Concerts;
-using Entities.Tickets;
+﻿using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Entities.City;
+namespace Entities;
 
 public class City : BaseEntity
 {
     public string? Title { get; set; }
     public DateTime Time { get; set; }
     public string Salon { get; set; }
-    public List<Singer.Singer> Singers { get; set; }
+    public List<Singer> Singers { get; set; }
     public List<Concert> Concerts { get; set; }
     public List<Ticket> Tickets { get; set; }
 }

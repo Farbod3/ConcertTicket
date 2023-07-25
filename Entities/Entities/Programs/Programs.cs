@@ -1,9 +1,9 @@
-﻿using Entities.Tickets;
+﻿using Entities;
 
-namespace Entities.Programs;
+namespace Entities;
 
 public class Programs : BaseEntity
 {
-    public List<Archive.Archive> Archives { get; set; }
+    public List<Archive> Archives { get; set; }
     
 }

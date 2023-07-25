@@ -1,5 +1,4 @@
 ﻿using Entities;
-using Entities.Tickets;
 using Microsoft.AspNetCore.Identity;
 
 namespace Entities;

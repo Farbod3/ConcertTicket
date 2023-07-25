@@ -37,4 +37,8 @@
       <ProjectReference Include="..\WebFramework\WebFramework.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove=".gitignore.txt" />
+    </ItemGroup>
+
 </Project>

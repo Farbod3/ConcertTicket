@@ -18,4 +18,5 @@ public class BaseDto <TSource, TDestination, TKey>
     public virtual void MyCustomMapping(IMappingExpression<TSource, TDestination> mapping)
     {
     }
+    
 }

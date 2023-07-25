@@ -1,7 +1,7 @@
-﻿using Entities.Concerts;
-using Entities.Tickets;
+﻿using Entities;
+using Entities;
 
-namespace Entities.Reservation;
+namespace Entities;
 
 public class Reservation : BaseEntity
 {
