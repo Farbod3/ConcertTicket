@@ -38,7 +38,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove=".gitignore.txt" />
+      <None Include=".gitignore" />
     </ItemGroup>
 
 </Project>

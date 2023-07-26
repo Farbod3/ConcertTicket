@@ -15,13 +15,13 @@ public class Ticket : BaseEntity
     public City City { get; set; }
     public long SingerId { get; set; }
     public Singer Singer { get; set; }
-    
+
     public long UserId { get; set; }
     public User User { get; set; }
-    
+
     public long ConcertId { get; set; }
     public Concert Concert { get; set; }
-    
+
     public long ReservationId { get; set; }
     public Reservation Reservation { get; set; }
 }
@@ -30,7 +30,6 @@ public class TicketTypeConfiguration : IEntityTypeConfiguration<Ticket>
 {
     public void Configure(EntityTypeBuilder<Ticket> builder)
     {
-        //one city with many tickets
         builder.HasOne(a => a.City)
             .WithMany(b => b.Tickets)
             .HasForeignKey(c => c.CityId);
@@ -46,6 +45,5 @@ public class TicketTypeConfiguration : IEntityTypeConfiguration<Ticket>
         builder.HasOne(p => p.Reservation)
             .WithMany(q => q.Tickets)
             .HasForeignKey(r => r.ReservationId);
-
     }
 }
