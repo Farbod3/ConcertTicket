@@ -1,6 +1,7 @@
 using Data;
 using Data.Repository.GenericRepository;
 using Data.Repository.IGenericRepository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.FileProviders;
 using WebFramework.Mapper;
 using WebFramework.ServiceExtension;
@@ -19,6 +20,10 @@ builder.Services.AddAutoMapper(typeof(ICustomMapping));
 
 var cs = builder.Configuration.GetConnectionString("sqlite")!;
 builder.Services.AddSqlite<ConcertTicketDbContext>(cs);
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => { })
+    .AddEntityFrameworkStores<ConcertTicketDbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.

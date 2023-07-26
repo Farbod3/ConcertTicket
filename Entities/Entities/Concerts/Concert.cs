@@ -21,6 +21,7 @@ public class Concert : BaseEntity
     public City City { get; set; }
 }
 
+#region relations
 public class ConcertTypeConfiguration : IEntityTypeConfiguration<Concert>
 {
     public void Configure(EntityTypeBuilder<Concert> builder)
@@ -38,3 +39,4 @@ public class ConcertTypeConfiguration : IEntityTypeConfiguration<Concert>
             .WithMany(n => n.Concerts);
     }
 }
+#endregion

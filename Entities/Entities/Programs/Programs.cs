@@ -10,7 +10,7 @@ public class Programs : BaseEntity
 
     public List<Archive> Archives { get; set; }
 }
-
+#region relations
 public class ProgramsTypeConfiguration : IEntityTypeConfiguration<Programs>
 {
     public void Configure(EntityTypeBuilder<Programs> builder)
@@ -20,3 +20,4 @@ public class ProgramsTypeConfiguration : IEntityTypeConfiguration<Programs>
             .HasForeignKey(c => c.programsId);
     }
 }
+#endregion

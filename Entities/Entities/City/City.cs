@@ -14,6 +14,7 @@ public class City : BaseEntity
     public List<Ticket> Tickets { get; set; }
 }
 
+#region relations
 public class CityTypeConfiguration : IEntityTypeConfiguration<City>
 {
     public void Configure(EntityTypeBuilder<City> builder)
@@ -28,3 +29,4 @@ public class CityTypeConfiguration : IEntityTypeConfiguration<City>
             .HasForeignKey(h => h.CityId);
     }
 }
+#endregion

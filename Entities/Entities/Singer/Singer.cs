@@ -14,6 +14,7 @@ public class Singer : BaseEntity
     public List<Ticket> Tickets { get; set; }
     public List<Concert> Concerts { get; set; }
 }
+#region relations
 public class SingerTypeConfiguration : IEntityTypeConfiguration<Singer>
 {
     public void Configure(EntityTypeBuilder<Singer> builder)
@@ -29,3 +30,4 @@ public class SingerTypeConfiguration : IEntityTypeConfiguration<Singer>
 
     }
 }
+#endregion

@@ -25,7 +25,7 @@ public class Ticket : BaseEntity
     public long ReservationId { get; set; }
     public Reservation Reservation { get; set; }
 }
-
+#region relations
 public class TicketTypeConfiguration : IEntityTypeConfiguration<Ticket>
 {
     public void Configure(EntityTypeBuilder<Ticket> builder)
@@ -47,3 +47,4 @@ public class TicketTypeConfiguration : IEntityTypeConfiguration<Ticket>
             .HasForeignKey(r => r.ReservationId);
     }
 }
+#endregion
