@@ -5,5 +5,4 @@ namespace ConcertTicket.Models;
 
 public class UserSelectDto : BaseDto<User , UserSelectDto , long>
 {
-    
 }

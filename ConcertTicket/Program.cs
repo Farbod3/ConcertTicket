@@ -1,6 +1,7 @@
 using Data;
 using Data.Repository.GenericRepository;
 using Data.Repository.IGenericRepository;
+using Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.FileProviders;
 using WebFramework.Mapper;
@@ -21,31 +22,26 @@ builder.Services.AddAutoMapper(typeof(ICustomMapping));
 var cs = builder.Configuration.GetConnectionString("sqlite")!;
 builder.Services.AddSqlite<ConcertTicketDbContext>(cs);
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => { })
-    .AddEntityFrameworkStores<ConcertTicketDbContext>()
-    .AddDefaultTokenProviders();
+builder.Services.AddAuthentication(); 
+builder.Services.IdentityConfig();
+
+//   builder.Services.AddIdentity<User, Role>(options => { })
+//     .AddEntityFrameworkStores<ConcertTicketDbContext>()
+//     .AddDefaultTokenProviders();
 
 var app = builder.Build();
+
 // Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-#region Static File Setup
-app.UseFileServer(new FileServerOptions
-{
-    FileProvider = new PhysicalFileProvider(
-        Path.Combine(Directory.GetCurrentDirectory(), "View")),
-    RequestPath = "/View",
-    EnableDefaultFiles = true
-});
-#endregion
-
 
 app.UseHttpsRedirection();
 
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
