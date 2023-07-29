@@ -1,9 +1,6 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using AutoMapper;
-using ConcertTicket.Models;
+﻿using ConcertTicket.Models;
 using Entities;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal;
 using Microsoft.AspNetCore.Mvc;
 using WebFramework.BaseController;
 
@@ -18,7 +15,7 @@ public class LoginPage : BaseController
         _userManager = userManager;
     }
 
-    [HttpPost("CreatUser")]
+    [HttpPost(nameof(CreatUser))]
     public async Task<IActionResult> CreatUser([FromBody] UserDto userDto)
     {
         var user = new User
@@ -31,14 +28,9 @@ public class LoginPage : BaseController
         if (userDto.UserName != null) await _userManager.CreateAsync(user, userDto.UserName);
         return Ok(user);
         
-        // if (user1 != null && await _userManager.CheckPasswordAsync(user, model.Password))
-        // {
-        //     var token = GenerateJwtToken(user);
-        //     return Ok(new { token, userDto });
-        // }
     }
 
-    [HttpPost("LoginUser")]
+    [HttpPost(nameof(LoginUser))]
     public async Task<IActionResult> LoginUser(long id)
     {
         var userlogin = await _userManager.FindByIdAsync(id.ToString());

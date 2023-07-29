@@ -23,7 +23,7 @@ public static class ServiceCollectionExtension
             a.Password.RequireLowercase = false;
             a.Password.RequireUppercase = false;
             a.Password.RequireNonAlphanumeric = false;
-            a.Password.RequiredLength = 1;
+            a.Password.RequiredLength = 3;
             a.User.RequireUniqueEmail = false;
         })
             .AddEntityFrameworkStores<ConcertTicketDbContext>()
