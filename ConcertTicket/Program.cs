@@ -1,10 +1,10 @@
+// using Common.JwtUtils;
 using Data;
 using Data.Repository.GenericRepository;
 using Data.Repository.IGenericRepository;
-using Entities;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using WebFramework.Mapper;
+using WebFramework.Middleware;
 using WebFramework.ServiceExtension;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,12 +22,19 @@ builder.Services.AddAutoMapper(typeof(ICustomMapping));
 var cs = builder.Configuration.GetConnectionString("sqlite")!;
 builder.Services.AddSqlite<ConcertTicketDbContext>(cs);
 
+// builder.Services.Configure<JwtSetting>(Configuration.GetSection("JwtSetting"));
+
+builder.Services.AddAuthentication(options => 
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+    });
 builder.Services.AddAuthentication(); 
 builder.Services.IdentityConfig();
 
-//   builder.Services.AddIdentity<User, Role>(options => { })
-//     .AddEntityFrameworkStores<ConcertTicketDbContext>()
-//     .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
@@ -45,5 +52,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMiddleware<MyMiddleware>();
 
 app.Run();

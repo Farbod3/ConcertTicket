@@ -10,4 +10,4 @@ public class User : IdentityUser<long>,IBaseEntity
     public string? LastName { get; set; }
     
     public List<Ticket> Tickets { get; set; }
-}
+}   
