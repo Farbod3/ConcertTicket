@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Service.IJWT;
+using Service.JWT;
 using WebFramework.BaseController;
 
 namespace ConcertTicket.Controllers;
@@ -13,18 +15,19 @@ namespace ConcertTicket.Controllers;
 public class LoginPage : BaseController
 {
     private readonly UserManager<User> _userManager;
+    private readonly IJwt _ijwt;
 
-    public LoginPage(UserManager<User> userManager)
+    public LoginPage(UserManager<User> userManager , IJwt ijwt)
     {
         _userManager = userManager;
+        _ijwt = ijwt;
     }
 
     [HttpPost(nameof(CreatUser))]
-    public async Task<IActionResult> CreatUser([FromBody] UserDto userDto )
+    public async Task<ActionResult> CreatUser([FromBody] UserDto userDto )
     {
-        // string passwordHash
-        //     = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
-        var user = new User
+       
+        var model = new User
         {
             FirstName = userDto.FirstName,
             PasswordHash = userDto.Password,
@@ -33,21 +36,18 @@ public class LoginPage : BaseController
             UserName = userDto.UserName,
             PhoneNumber = userDto.PhoneNumber
         };
-        await _userManager.CreateAsync(user, userDto.Password);
-        return Ok(user);
+       var result = await _userManager.CreateAsync(model, userDto.Password);
+       return Ok(result);
     }
+    [Authorize]
     [HttpPost(nameof(LoginUser))]
-    public async Task<IActionResult> LoginUser(long id)
+    public async Task<ActionResult<Token>> LoginUser([FromBody]UserSelectDto dto)
     {
-        var userlogin = await _userManager.FindByIdAsync(id.ToString());
-        return Ok(userlogin);
+        var userlogin = await _userManager.FindByNameAsync(dto.UserName);
+        var isPassword = await _userManager.CheckPasswordAsync(userlogin, dto.Password);
+
+        var token = await _ijwt.GenerateToken(userlogin);
+        return new JsonResult(token);
     }
-    // private string CreateToken(User user)
-    // {
-    //     List<Claim> claims = new List<Claim>
-    //     {
-    //         new Claim(ClaimTypes.Role, user.UserName)
-    //     };
-    //     var Key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_userManager.) );
-    // }
+    
 }

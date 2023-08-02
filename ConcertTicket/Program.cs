@@ -1,11 +1,15 @@
-// using Common.JwtUtils;
+using System.Text;
 using Data;
 using Data.Repository.GenericRepository;
 using Data.Repository.IGenericRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Service.IJWT;
+using Service.JWT;
 using WebFramework.Mapper;
 using WebFramework.Middleware;
 using WebFramework.ServiceExtension;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,23 +20,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped (typeof(IRepository<>),typeof(Repository<>));
-
+builder.Services.AddScoped(typeof(IJwt),typeof(Jwt));
 builder.Services.AddAutoMapper(typeof(ICustomMapping));
 
 var cs = builder.Configuration.GetConnectionString("sqlite")!;
 builder.Services.AddSqlite<ConcertTicketDbContext>(cs);
 
-// builder.Services.Configure<JwtSetting>(Configuration.GetSection("JwtSetting"));
-
-builder.Services.AddAuthentication(options => 
-    {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    })
-    .AddJwtBearer(options =>
-    {
-    });
-builder.Services.AddAuthentication(); 
+builder.Services.AddAuthentication();
+builder.Services.ConfigureJWT(builder.Configuration );
 builder.Services.IdentityConfig();
 
 

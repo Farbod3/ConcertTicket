@@ -1,12 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Entities;
-using WebFramework.Mapper;
-
+﻿
 namespace ConcertTicket.Models;
-
+    
 public class UserDto 
 {
-    
     public string? FirstName { get; init; }
     public string? LastName { get; init; }
     public string? UserName { get; init; }

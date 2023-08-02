@@ -142,7 +142,6 @@
           "Microsoft.AspNetCore.App"
         ],
         "build": {
-          "build/Microsoft.AspNetCore.Identity.UI.props": {},
           "buildTransitive/Microsoft.AspNetCore.Identity.UI.targets": {}
         },
         "buildMultiTargeting": {
@@ -3100,7 +3099,6 @@
       "Entities >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.5",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.5",
-      "Microsoft.AspNetCore.Identity.UI >= 7.0.5",
       "Microsoft.AspNetCore.OpenApi >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.5",
@@ -3183,10 +3181,6 @@
             "version": "[7.0.5, )"
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[7.0.5, )"
-          },
-          "Microsoft.AspNetCore.Identity.UI": {
             "target": "Package",
             "version": "[7.0.5, )"
           },
