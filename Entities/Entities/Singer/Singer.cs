@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using System.ComponentModel.DataAnnotations;
+using Entities;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -7,8 +8,12 @@ namespace Entities;
 
 public class Singer : BaseEntity
 {
+    [Required]
+    [MaxLength(100)]
     public DateTime Time { get; set; }
-    public string loccation { get; set; }
+    [Required]
+    [MaxLength(100)]
+    public string? loccation { get; set; }
     
     public List<City> Cities { get; set; }
     public List<Ticket> Tickets { get; set; }

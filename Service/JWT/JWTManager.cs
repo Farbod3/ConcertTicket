@@ -17,21 +17,17 @@ public class Jwt : IJwt
             Expires = DateTime.Now.AddMinutes(1 * 24 * 60),
             SigningCredentials =
                 new SigningCredentials(
-                    new SymmetricSecurityKey("12345678910111213114151617181920"u8.ToArray()),
-                    SecurityAlgorithms.HmacSha384Signature),
+                    new SymmetricSecurityKey("farbod123456789123456789123456789"u8.ToArray()),
+                    SecurityAlgorithms.HmacSha256Signature),
             EncryptingCredentials = new EncryptingCredentials(
-                new SymmetricSecurityKey("1234567891011121314151617181920"u8.ToArray()),
-                SecurityAlgorithms.Aes128KW, SecurityAlgorithms.Aes128CbcHmacSha256)
+                new SymmetricSecurityKey("12345678912345678"u8.ToArray()),
+                SecurityAlgorithms.Aes128CbcHmacSha256, SecurityAlgorithms.HmacSha256Signature)
             
         };
         var handler = new JwtSecurityTokenHandler();
         var secret = handler.CreateJwtSecurityToken(descrypt);
         return new TokenResult(secret);
     }
-    
-     
-    
-    
     
     // private readonly UserManager<User> _userManager;
     // private readonly IConfiguration _configuration;

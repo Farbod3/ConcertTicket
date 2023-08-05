@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using System.ComponentModel.DataAnnotations;
+using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -6,6 +7,8 @@ namespace Entities;
 
 public class Programs : BaseEntity
 {
+    [Required]
+    [MaxLength(100)]
     public string Title { get; set; }
 
     public List<Archive> Archives { get; set; }

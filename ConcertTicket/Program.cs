@@ -3,6 +3,7 @@ using Data;
 using Data.Repository.GenericRepository;
 using Data.Repository.IGenericRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Service.IJWT;
 using Service.JWT;
@@ -23,11 +24,14 @@ builder.Services.AddScoped (typeof(IRepository<>),typeof(Repository<>));
 builder.Services.AddScoped(typeof(IJwt),typeof(Jwt));
 builder.Services.AddAutoMapper(typeof(ICustomMapping));
 
+// builder.Services.AddDbContext<ConcertTicketDbContext>(p =>
+//     p.UseSqlite(builder.Configuration.GetConnectionString("sqlite")));
+
 var cs = builder.Configuration.GetConnectionString("sqlite")!;
 builder.Services.AddSqlite<ConcertTicketDbContext>(cs);
 
 builder.Services.AddAuthentication();
-builder.Services.ConfigureJWT(builder.Configuration );
+builder.Services.ConfigureJwt(builder.Configuration );
 builder.Services.IdentityConfig();
 
 

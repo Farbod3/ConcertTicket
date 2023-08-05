@@ -20,5 +20,19 @@ public class
 
         modelBuilder.AddAllEntities<IBaseEntity>(assemblies);
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(IBaseEntity).Assembly);
+        
+        modelBuilder.Entity<User>()
+            .HasKey(u => u.Id);
+        modelBuilder.Entity<User>()
+            .Property(u => u.FirstName)
+            .IsRequired()
+            .HasMaxLength(100);
+        
+        
+
+
+
+
+
     }
 }

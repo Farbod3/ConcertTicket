@@ -1,9 +1,19 @@
-﻿namespace Entities;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Entities;
 
 public class Support : BaseEntity
 {
-    public int PhoneNumber { get; set; }
-    public string Description { get; set; }
-    public string Location { get; set; }
-    public string Email { get; set; }
+    [Required]
+    [MaxLength(100)]
+    public int? PhoneNumber { get; set; }
+    [Required]
+    [MaxLength(100)]
+    public string? Description { get; set; }
+    [Required]
+    [MaxLength(100)]
+    public string? Location { get; set; }
+    [Required]
+    [MaxLength(100)]
+    public string? Email { get; set; }
 }
