@@ -20,8 +20,8 @@ public class Jwt : IJwt
                     new SymmetricSecurityKey("farbod123456789123456789123456789"u8.ToArray()),
                     SecurityAlgorithms.HmacSha256Signature),
             EncryptingCredentials = new EncryptingCredentials(
-                new SymmetricSecurityKey("12345678912345678"u8.ToArray()),
-                SecurityAlgorithms.Aes128CbcHmacSha256, SecurityAlgorithms.HmacSha256Signature)
+                new SymmetricSecurityKey("1234567891234567"u8.ToArray()),
+                SecurityAlgorithms.Aes128KW, SecurityAlgorithms.Aes128CbcHmacSha256)
             
         };
         var handler = new JwtSecurityTokenHandler();

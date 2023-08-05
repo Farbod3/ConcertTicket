@@ -37,6 +37,8 @@ public class UserController : BaseController
        return Ok(result);
     }
     
+    [HttpGet]
+    
     
     [HttpPost(nameof(LoginUser))]
     public async Task<ActionResult<Token>> LoginUser([FromBody]UserSelectDto dto)

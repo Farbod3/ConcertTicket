@@ -6,7 +6,7 @@ public class TokenResult
 {
     public TokenResult(JwtSecurityToken token)
     {
-        this.Token = token.ToString();
+        Token = token.RawData;
         Expire = 1;
         Type = "bearer";
 
