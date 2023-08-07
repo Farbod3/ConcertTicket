@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -7,25 +6,39 @@ namespace Entities;
 
 public class City : BaseEntity
 {
-    [Required]
-    [MaxLength(100)]
     public string? Title { get; set; }
-    [Required]
-    [MaxLength(100)]
     public DateTime Time { get; set; }
-    [Required]
-    [MaxLength(100)]
-    public string plase { get; set; }
+    public string? plase { get; set; }
+    
+    
     public List<Singer> Singers { get; set; }
     public List<Concert> Concerts { get; set; }
     
 }
 
-#region relations
+#region Fluent&Relation
 public class CityTypeConfiguration : IEntityTypeConfiguration<City>
 {
     public void Configure(EntityTypeBuilder<City> builder)
     {
+        #region Fluent
+        builder.Property(t => t.Title)
+            .IsUnicode(true)
+            .HasMaxLength(100)
+            .IsConcurrencyToken()
+            .IsRowVersion();
+          
+          builder.Property(ti=>ti.Time)
+              .IsUnicode(true)
+                  .HasMaxLength(100)
+                  .IsConcurrencyToken()
+                  .IsRowVersion();
+          builder.Property(p=>p.plase)
+              .IsUnicode(true)
+              .HasMaxLength(100)
+              .IsConcurrencyToken()
+              .IsRowVersion();
+          #endregion
         builder.HasMany(a => a.Singers)
             .WithMany(b => b.Cities);
         builder.HasMany(c => c.Concerts)

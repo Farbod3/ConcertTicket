@@ -6,7 +6,7 @@ namespace Data.Repository.IGenericRepository;
 
 public interface IRepository<TEntity> where TEntity : BaseEntity
 {
-    DbSet<TEntity?> Entities { get; }
+    DbSet<TEntity> Entities { get; }
     IQueryable<TEntity?> Table { get; }
     IQueryable<TEntity?> TableNoTracking { get; }
 
@@ -42,4 +42,5 @@ public interface IRepository<TEntity> where TEntity : BaseEntity
 
     Task UpdateRangeAsync(IEnumerable<TEntity?> entities, CancellationToken cancellationToken, bool saveNow = true);
     void Dispose();
+
 }

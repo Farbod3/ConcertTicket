@@ -13,9 +13,9 @@ public class Concert : BaseEntity
     [Required]
     [MaxLength(100)]
     public string? SingerName { get; set; }
-
-    public long? ArchiveId { get; set; }
-    public Archive Archive { get; set; }
+    
+    // public long? ArchiveId { get; set; }
+    // public Archive? Archive { get; set; }
     public List<Ticket> Tickets { get; set; }
     public long? SingerId { get; set; }
     public Singer Singer { get; set; }
@@ -26,11 +26,30 @@ public class Concert : BaseEntity
     public City City { get; set; }
 }
 
-#region relations
+#region Fluent&Relations
 public class ConcertTypeConfiguration : IEntityTypeConfiguration<Concert>
 {
+    
     public void Configure(EntityTypeBuilder<Concert> builder)
     {
+
+        #region Fluent
+ 
+         builder.Property(t=>t.Title)
+             .IsUnicode(true)
+             .HasMaxLength(100)
+             .IsConcurrencyToken()
+             .IsRowVersion();
+         builder.Property(s=>s.SingerName)
+             .IsUnicode(true)
+             .HasMaxLength(100)
+             .IsConcurrencyToken()
+             .IsRowVersion();
+        
+
+        #endregion
+        
+        
         builder.HasOne(a => a.Singer)
             .WithMany(b => b.Concerts)
             .HasForeignKey(c => c.SingerId);

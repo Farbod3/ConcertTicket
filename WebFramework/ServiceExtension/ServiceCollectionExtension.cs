@@ -30,7 +30,7 @@ public static class ServiceCollectionExtension
             a.User.RequireUniqueEmail = false;
         
         })
-            .AddEntityFrameworkStores<ConcertTicketDbContext>()
+                .AddEntityFrameworkStores<ConcertTicketDbContext>()
             .AddDefaultTokenProviders();
     }
 

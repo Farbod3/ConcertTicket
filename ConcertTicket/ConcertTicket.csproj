@@ -28,10 +28,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="View\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Common\Common.csproj" />
       <ProjectReference Include="..\Data\Data.csproj" />
       <ProjectReference Include="..\Entities\Entities.csproj" />

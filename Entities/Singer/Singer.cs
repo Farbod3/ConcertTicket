@@ -8,22 +8,32 @@ namespace Entities;
 
 public class Singer : BaseEntity
 {
-    [Required]
-    [MaxLength(100)]
     public DateTime Time { get; set; }
-    [Required]
-    [MaxLength(100)]
     public string? loccation { get; set; }
+    
     
     public List<City> Cities { get; set; }
     public List<Ticket> Tickets { get; set; }
     public List<Concert> Concerts { get; set; }
 }
-#region relations
+#region Fluent&Relations
 public class SingerTypeConfiguration : IEntityTypeConfiguration<Singer>
 {
     public void Configure(EntityTypeBuilder<Singer> builder)
     {
+        #region Fluent
+        builder.Property(t=>t.Time)
+             .IsUnicode(true)
+             .HasMaxLength(100)
+             .IsConcurrencyToken()
+             .IsRowVersion();
+         builder.Property(l=>l.loccation)
+             .IsUnicode(true)
+             .HasMaxLength(100)
+             .IsConcurrencyToken()
+             .IsRowVersion();
+         #endregion
+        
         builder.HasMany(a => a.Cities)
             .WithMany(b => b.Singers);
         builder.HasMany(c => c.Tickets)

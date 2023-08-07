@@ -1,10 +1,18 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 
 namespace WebFramework.Middleware;
-
+public static class AddMyMiddlewares
+{
+    public static IApplicationBuilder MyMiddleware(this IApplicationBuilder builder)
+    {
+        return builder.UseMiddleware<MyMiddleware>();
+    }
+}
 public class MyMiddleware  
 {
     private readonly RequestDelegate _next;
@@ -28,18 +36,18 @@ public class MyMiddleware
         _env = env;
         _logger = logger;
     }
-    
-    public async Task InvokeAsync(HttpContext context)
+
+    public async Task Invoke(HttpContext context)
     {
-        var path = context.Request.Path;
-        if (!path.StartsWithSegments("/swagger", StringComparison.OrdinalIgnoreCase) &&
-            MimeType.TryGetValue(Path.GetExtension(path), out var mimType))
+        var path = context.Request.Path!;
+        if (!path.StartsWithSegments("/swagger", StringComparison.OrdinalIgnoreCase)
+            && MimeType.TryGetValue(Path.GetExtension(path), out var mimeType))
         {
-            var filepath = Path.Combine(Directory.GetCurrentDirectory(), "View", path.Value ?? "");
-            if (File.Exists(filepath))
+            var filePath = $"{Directory.GetCurrentDirectory()}/View{path.Value}";
+            if (File.Exists(filePath))
             {
-                var fileContent = await File.ReadAllTextAsync(filepath);
-                context.Response.ContentType = mimType;
+                var fileContent = await File.ReadAllTextAsync(filePath);
+                context.Response.ContentType = mimeType;
                 await context.Response.WriteAsync(fileContent);
                 return;
             }
@@ -48,3 +56,6 @@ public class MyMiddleware
         await _next(context);
     }
 }
+
+     
+    

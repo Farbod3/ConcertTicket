@@ -11,7 +11,7 @@ namespace ConcertTicket.Controllers;
 
 public class UserController : BaseController
 {
-    private readonly UserManager<User> _userManager;
+    private readonly UserManager<User> _userManager; 
     private readonly IJwt _ijwt;
 
     public UserController(UserManager<User> userManager , IJwt ijwt)
@@ -36,9 +36,6 @@ public class UserController : BaseController
        var result = await _userManager.CreateAsync(model, userDto.Password!);
        return Ok(result);
     }
-    
-    [HttpGet]
-    
     
     [HttpPost(nameof(LoginUser))]
     public async Task<ActionResult<Token>> LoginUser([FromBody]UserSelectDto dto)
