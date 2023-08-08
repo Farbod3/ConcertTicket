@@ -27,7 +27,6 @@ public class UserController : BaseController
         var model = new User
         {
             FirstName = userDto.FirstName,
-            Password = userDto.Password,
             Email = userDto.Email,
             LastName = userDto.LastName,
             UserName = userDto.UserName,
@@ -38,7 +37,7 @@ public class UserController : BaseController
     }
     
     [HttpPost(nameof(LoginUser))]
-    public async Task<ActionResult<Token>> LoginUser([FromBody]UserSelectDto dto)
+    public async Task<ActionResult<Token>> LoginUser([FromBody]UserDto dto)
     {
         var userlogin = await _userManager.FindByNameAsync(dto.UserName);
         var isPassword = await _userManager.CheckPasswordAsync(userlogin, dto.Password);

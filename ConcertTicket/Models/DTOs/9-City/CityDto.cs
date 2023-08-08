@@ -11,3 +11,4 @@ public class CityDto : BaseDto<City,CityDto,long>
     public string Salon { get; set; }
    
 }
+

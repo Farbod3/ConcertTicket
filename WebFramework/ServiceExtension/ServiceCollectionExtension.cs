@@ -20,17 +20,17 @@ public static class ServiceCollectionExtension
 
     public static void IdentityConfig(this IServiceCollection services)
     {
-        var builder = services.AddIdentity<User , Role>(a =>
-        {
-            a.Password.RequireDigit = false;
-            a.Password.RequireLowercase = false;
-            a.Password.RequireUppercase = false;
-            a.Password.RequireNonAlphanumeric = false;
-            a.Password.RequiredLength = 1;
-            a.User.RequireUniqueEmail = false;
+            services.AddIdentity<User , Role>(a =>
+            {
+                a.Password.RequireDigit = false;
+                a.Password.RequireLowercase = false;
+                a.Password.RequireUppercase = false;
+                a.Password.RequireNonAlphanumeric = false;
+                a.Password.RequiredLength = 1;
+                a.User.RequireUniqueEmail = false;
         
-        })
-                .AddEntityFrameworkStores<ConcertTicketDbContext>()
+            })
+            .AddEntityFrameworkStores<ConcertTicketDbContext>()
             .AddDefaultTokenProviders();
     }
 
