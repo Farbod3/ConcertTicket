@@ -9,4 +9,5 @@
   &lt;Assembly Path="C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\7.0.0\ref\net7.0\Microsoft.AspNetCore.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Users\IT LAND\.nuget\packages\microsoft.aspnetcore.identity.ui\7.0.5\lib\net7.0\Microsoft.AspNetCore.Identity.UI.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:Boolean x:Key="/Default/Environment/InlayHints/GeneralInlayHintsOptions/EnableInlayHints/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/Environment/InlayHints/GeneralInlayHintsOptions/EnableInlayHints/@EntryValue">True</s:Boolean>
+	</wpf:ResourceDictionary>

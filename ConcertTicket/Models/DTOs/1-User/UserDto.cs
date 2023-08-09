@@ -22,15 +22,15 @@ public class UserDto : IValidatableObject
             yield return new ValidationResult("LastName is required!!");
         if (string.IsNullOrEmpty(userDto.UserName))
             yield return new ValidationResult("UserName is required!!");
-        if (userDto.UserName.Length != 5)
+        if (userDto.UserName != null && userDto.UserName.Length != 5)
             yield return new ValidationResult("UserName is too short");
         if (string.IsNullOrEmpty(userDto.Email))
             yield return new ValidationResult("Email is required!!");
-        if (userDto.Email.Contains("@gmail.com") == false)
+        if (userDto.Email != null && userDto.Email.Contains("@gmail.com") == false)
             yield return new ValidationResult("Invalid Email");
         if (string.IsNullOrEmpty(userDto.PhoneNumber))
             yield return new ValidationResult("PhoneNumber is required!!");
-        if (userDto.PhoneNumber.Length != 10)
+        if (userDto.PhoneNumber != null && userDto.PhoneNumber.Length != 10)
             yield return new ValidationResult("phineNumber is too short");
 
         

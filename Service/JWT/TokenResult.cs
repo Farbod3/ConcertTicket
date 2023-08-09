@@ -15,6 +15,7 @@ public class TokenResult
     public string Token { get; set; }
     public long Expire { get; set; }
     public string Type { get; set; }
+    public bool IsAuthenticated { get; }
 }
 
 public class Token
