@@ -2,7 +2,7 @@
 
 namespace Service.JWT;
 
-public class TokenResult
+public class  TokenResult
 {
     public TokenResult(JwtSecurityToken token)
     {

@@ -15,7 +15,7 @@ public class MappingConfigs : Profile
         {
             var dto = Activator.CreateInstance(type) as ICustomMapping;
 
-            dto!.ApplyMapping(this);
-        }
+            dto!.AddMapping(this);
+        }   
     }
 }

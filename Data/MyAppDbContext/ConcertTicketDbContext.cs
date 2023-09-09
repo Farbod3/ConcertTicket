@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data;
 
-public class
+public class 
     ConcertTicketDbContext : IdentityDbContext<User, Role, long, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
 {
     public ConcertTicketDbContext(DbContextOptions<ConcertTicketDbContext> options) : base(options)
@@ -27,12 +27,7 @@ public class
             .Property(u => u.FirstName)
             .IsRequired()
             .HasMaxLength(100);
-        
-        
-
-
-
-
-
+     
     }
+        
 }

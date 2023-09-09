@@ -5,7 +5,7 @@ namespace DTOs;
 
 public class SingerDto : BaseDto<Singer,SingerDto,long>
 {
-    public DateTime Time { get; set; }
+    public DateTime? Time { get; set; }
     public string loccation { get; set; }
     
 }

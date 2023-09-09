@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repository.IGenericRepository;
 
-public interface IRepository<TEntity> where TEntity : BaseEntity
+public interface IRepository<TEntity> where TEntity : class
 {
     DbSet<TEntity> Entities { get; }
     IQueryable<TEntity?> Table { get; }
@@ -12,6 +12,7 @@ public interface IRepository<TEntity> where TEntity : BaseEntity
 
     void Add(TEntity? entity, bool saveNow = true);
     Task AddAsync(TEntity? entity, CancellationToken cancellationToken, bool saveNow = true);
+    public IEnumerable<TEntity> GetAll(CancellationToken cancellationToken);
     void AddRange(IEnumerable<TEntity?> entities, bool saveNow = true);
     Task AddRangeAsync(IEnumerable<TEntity?> entities, CancellationToken cancellationToken, bool saveNow = true);
     void Attach(TEntity? entity);

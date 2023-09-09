@@ -1,13 +1,15 @@
 using System.IdentityModel.Tokens.Jwt;
+using Common.Dependency;
 using Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Service.IJWT;
 
 namespace Service.JWT;
 
-public class Jwt : IJwt
+public class JwtManager : IJwtManager, ISingletonDependency
 {
-    public async Task<TokenResult> GenerateToken(User user)
+    public async Task<TokenResult> GenerateToken(User signInResult)
     {
         var descrypt = new SecurityTokenDescriptor
         {
@@ -22,12 +24,9 @@ public class Jwt : IJwt
             EncryptingCredentials = new EncryptingCredentials(
                 new SymmetricSecurityKey("1234567891234567"u8.ToArray()),
                 SecurityAlgorithms.Aes128KW, SecurityAlgorithms.Aes128CbcHmacSha256)
-            
         };
         var handler = new JwtSecurityTokenHandler();
         var secret = handler.CreateJwtSecurityToken(descrypt);
         return new TokenResult(secret);
     }
-    
-    
 }

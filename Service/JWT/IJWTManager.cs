@@ -4,7 +4,8 @@ using Service.JWT;
 
 namespace Service.IJWT;
 
-public interface IJwt
+public interface IJwtManager
 {
-    Task<TokenResult> GenerateToken(User user);
+    Task<TokenResult> GenerateToken(User signInResult);
+
 }

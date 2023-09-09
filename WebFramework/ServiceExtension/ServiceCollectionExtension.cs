@@ -23,7 +23,7 @@ public static class ServiceCollectionExtension
 
     public static void IdentityConfig(this IServiceCollection services)
     {
-            services.AddIdentity<User , Role>(a =>
+        services.AddIdentity<User, Role>(a =>
             {
                 a.Password.RequireDigit = false;
                 a.Password.RequireLowercase = false;
@@ -31,7 +31,6 @@ public static class ServiceCollectionExtension
                 a.Password.RequireNonAlphanumeric = false;
                 a.Password.RequiredLength = 1;
                 a.User.RequireUniqueEmail = false;
-        
             })
             .AddEntityFrameworkStores<ConcertTicketDbContext>()
             .AddDefaultTokenProviders();
@@ -76,12 +75,12 @@ public static class ServiceCollectionExtension
                         };
                         context.Principal = new ClaimsPrincipal(new ClaimsIdentity(claims, context.Scheme.Name));
                         context.Success();
-                        return Task.FromResult<object>(null);
+                        return Task.FromResult<object>(null!);
                     },
                     OnMessageReceived = context =>
                     {
                         context.Token = "CustomToken";
-                        return Task.FromResult<object>(null);
+                        return Task.FromResult<object>(null!);
                     },
                     OnTokenValidated = context =>
                     {
@@ -98,7 +97,7 @@ public static class ServiceCollectionExtension
                         // context.ErrorDescription = description;
                         // context.ErrorUri = uri;
                         return Task.FromResult(0);
-                    } 
+                    }
                 };
             });
     }

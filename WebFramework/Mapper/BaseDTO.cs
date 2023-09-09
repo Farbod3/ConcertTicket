@@ -4,7 +4,7 @@ using AutoMapper;
 
 namespace WebFramework.Mapper;
 
-public class BaseDto <TSource, TDestination, TKey>
+public class BaseDto <TSource, TDestination, TKey> : ICustomMapping
 {
   
     [Display(Name = "Row")]
@@ -14,7 +14,7 @@ public class BaseDto <TSource, TDestination, TKey>
     {
         var map = profile.CreateMap<TSource, TDestination>();
         MyCustomMapping(map);
-    }
+    }       
     public virtual void MyCustomMapping(IMappingExpression<TSource, TDestination> mapping)
     {
     }

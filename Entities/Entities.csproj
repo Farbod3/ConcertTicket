@@ -11,12 +11,16 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Autofac" Version="7.0.1" />
+      <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
       <PackageReference Include="AutoMapper" Version="12.0.1" />
       <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
       <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
       <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
+      <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.5" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.5" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.5" />
+      <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -28,7 +32,10 @@
       </PackageReference>
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="7.0.5" />
+      <PackageReference Include="Rick.Docs.Samples.RouteInfo" Version="1.0.0.8" />
+      <PackageReference Include="Stimulsoft.Reports.Angular.NetCore" Version="2023.3.1" />
       <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.1" />
+      <PackageReference Include="System.Web.Http.AspNetCore" Version="0.1.0-alpha.21259.1" />
     </ItemGroup>
 
 </Project>

@@ -24,6 +24,10 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEnti
     {
         return await Entities.FindAsync(ids, cancellationToken);
     }
+    public IEnumerable<TEntity> GetAll(CancellationToken cancellationToken)
+    {
+        return Entities.ToList();
+    }
 
     public virtual async Task AddAsync(TEntity? entity, CancellationToken cancellationToken, bool saveNow = true)
     {

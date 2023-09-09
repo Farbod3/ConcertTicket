@@ -52,11 +52,23 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Autofac": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
               "target": "Package",
               "version": "[7.0.5, )"
             },
@@ -67,6 +79,10 @@
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -92,9 +108,21 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
+            "Rick.Docs.Samples.RouteInfo": {
+              "target": "Package",
+              "version": "[1.0.0.8, )"
+            },
+            "Stimulsoft.Reports.Angular.NetCore": {
+              "target": "Package",
+              "version": "[2023.3.1, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.32.1, )"
+            },
+            "System.Web.Http.AspNetCore": {
+              "target": "Package",
+              "version": "[0.1.0-alpha.21259.1, )"
             }
           },
           "imports": [
@@ -172,11 +200,23 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Autofac": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
               "target": "Package",
               "version": "[7.0.5, )"
             },
@@ -187,6 +227,10 @@
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -212,9 +256,21 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
+            "Rick.Docs.Samples.RouteInfo": {
+              "target": "Package",
+              "version": "[1.0.0.8, )"
+            },
+            "Stimulsoft.Reports.Angular.NetCore": {
+              "target": "Package",
+              "version": "[2023.3.1, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.32.1, )"
+            },
+            "System.Web.Http.AspNetCore": {
+              "target": "Package",
+              "version": "[0.1.0-alpha.21259.1, )"
             }
           },
           "imports": [
@@ -289,11 +345,23 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Autofac": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
               "target": "Package",
               "version": "[7.0.5, )"
             },
@@ -304,6 +372,10 @@
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -329,9 +401,21 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
+            "Rick.Docs.Samples.RouteInfo": {
+              "target": "Package",
+              "version": "[1.0.0.8, )"
+            },
+            "Stimulsoft.Reports.Angular.NetCore": {
+              "target": "Package",
+              "version": "[2023.3.1, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.32.1, )"
+            },
+            "System.Web.Http.AspNetCore": {
+              "target": "Package",
+              "version": "[0.1.0-alpha.21259.1, )"
             }
           },
           "imports": [
@@ -412,11 +496,23 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Autofac": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
               "target": "Package",
               "version": "[7.0.5, )"
             },
@@ -427,6 +523,10 @@
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -452,9 +552,21 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
+            "Rick.Docs.Samples.RouteInfo": {
+              "target": "Package",
+              "version": "[1.0.0.8, )"
+            },
+            "Stimulsoft.Reports.Angular.NetCore": {
+              "target": "Package",
+              "version": "[2023.3.1, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.32.1, )"
+            },
+            "System.Web.Http.AspNetCore": {
+              "target": "Package",
+              "version": "[0.1.0-alpha.21259.1, )"
             }
           },
           "imports": [

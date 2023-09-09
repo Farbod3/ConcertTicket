@@ -19,8 +19,4 @@ public static class ModelBuilderExtension
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(TBase).Assembly);
         
     }
-    
-    
-    
-    
 }
