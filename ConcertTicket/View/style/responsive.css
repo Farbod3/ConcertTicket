@@ -1,0 +1,146 @@
+@media(max-width:790px ){
+    .navbar{
+        justify-content: space-between;
+padding-left:16px ;
+padding-right: 16px;
+
+    }
+    .footer{
+        flex-grow: 1;
+    }
+   .menubar{
+    display:none;
+   }
+
+   .menuicon {
+    display: block;
+}
+
+    .plan-articles
+{ 
+    text-align: center;
+justify-content: space-evenly;
+/* gap: 1rem; */
+
+}
+}
+@media(max-width:790px ){
+   .concert-details{
+    row-gap: 3px;
+   }
+    .details{
+        width: 100%;
+        background-color: var(--input-background);
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+}
+/* ******************************************************************************************** */
+@media(max-width:670px){ 
+    .c-d-info.salonb{
+        border-left: 0px;
+    }
+
+    .c-d-lable{
+        font-size: 11px;
+    }
+    .c-d-info{
+        font-size: 11px;
+    }
+    .concert-header{
+        justify-content: space-between;
+    }
+    .ruletitle h1{
+        font-size: 13px;
+    }
+    .c-h-num .num{
+    font-size: 10px;
+    padding: 1px 7px;
+    margin-left: 4px;
+}
+.c-h-p{
+    font-size: 13px;
+}
+    .menubtn span{
+        font-size: 10px;
+    }
+    .menubtn .peigiri {
+      width: 7rem;
+    }
+    .menubtn .vorod p{
+    display: none;
+    }
+    .menubtn .vorod{
+     width: 40px;
+    }
+
+}
+/* *************************** */
+@media(max-width:520px){ 
+    .plan-articles .plan ,
+.plan-articles .soldout-plan{
+flex-basis: 11rem;
+height: 280px;
+margin: 1px;
+}
+.soldout-1{
+position:absolute;
+width: 8rem;
+}
+.concert-singer-img{
+    padding-bottom: calc(80% * (100 / 300));
+
+}
+.singer{
+    height:95%;
+}
+
+.concert-info{
+top: 50%;
+height:44%;
+}
+
+.concert-info h1{
+    margin-right: 1.5rem;
+    gap: 3px;
+    font-size: 10px;
+    }
+    .concert-info span{
+    font-size: 10px;
+    }
+    .concert-info p{
+    font-size: 10px;
+    }
+    .concert-info p img{
+    width: 10px;
+    }
+    .tamas-poshtibani{
+       flex-direction: column; 
+       margin-bottom: -10rem;
+       padding-bottom: 0;
+    }
+    .c-h-p{
+        font-size: 12px;
+    }
+    .c-h-num{
+        display: flex;
+        flex-direction: column;
+    }
+    .c-h-num .num{
+        margin: auto;
+        font-size: 13px;
+    }
+}
+/* ************************************** */
+    /* ************************************************************************************************* */
+    @media(max-width :396px){
+ .plan-articles .plan ,
+ .plan-articles .soldout-plan{
+flex-basis: 13rem;
+        }
+        .c-h-p{
+            font-size: 10px;
+        }
+    }  
+ 

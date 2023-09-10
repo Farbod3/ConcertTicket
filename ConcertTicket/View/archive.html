@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>honarticket</title>
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="./style/responsive.css">
+<script src="https://kit.fontawesome.com/d37833161d.js" crossorigin="anonymous"></script>
+<!-- <script src="./javascript/app.js"></script>/ -->
+</head>
+
+<body>
+    <div class="menu-phone" id="menu-phone">
+        <div class="login1 " >
+        <div class="menuonphone">
+            <button class="xmenu"><i class="fa-solid fa-x" style="color: #000000; font-weight:400; padding:4px 0.6rem; border-radius: 6px;"></i></button>
+            <div class="menu-phone-up">
+            <img src="icons/user-w.svg" alt="">
+            <button class=" vorod-mobile" onclick="opentab1('logintab')"><span><p>ورود / ثبت نام </p</span></button>
+        </div>
+            <div class="menubar-phone">
+                <a href="index.html" class="  activem1 hb" > <i class="fa-solid fa-table-cells-large" style="color:  rgb(179, 197, 217); "></i> برنامه ها</a>
+                
+                <a href="/tamas-tab.html"  class=" tamas-tab"> <i class="fa-solid fa-phone" style="color:  rgb(179, 197, 217);"></i>تماس و پشتیبانی</a>
+                <a href="/darbarema-tab.html" class=" darbare-tab" ><i class="fa-solid fa-volume-low" style="color:  rgb(179, 197, 217);"></i> درباره ما</a>
+                <a href="/archive.html"  class="archive-a"  ><i class="fa-solid fa-table-cells-large" style="color:  rgb(179, 197, 217);"></i>آرشیو</a>
+                <a   class="archive-a"  ><i class="fa-solid fa-ticket" style="color:  rgb(179, 197, 217);"></i>پیگیری خرید</a>
+            </div>
+        </div>
+        </div>
+    
+        </div>
+<div class="container">
+<div class="navbar" id="navbar">
+<div class="menu">
+    <div class="menuicon " onclick="openmenu('menu-phone','navbar')">
+<img src="icons/menu.png" alt="">
+</div>
+<div class="menulogo">
+<img src="./icons/honarticket_logo.png" alt="">
+</div>
+<div class="menubar">
+    <a href="index.html" class="a-menu   hb" > برنامه ها</a>
+    <a href="/tamas-tab.html"  class="a-menu tamas-tab"  >تماس و پشتیبانی</a>
+    <a href="/darbarema-tab.html" class="a-menu darbare-tab " > درباره ما</a>
+    <a href="/archive.html"  class="a-menu archive-a activem1"  >آرشیو</a>
+</div>
+</div>
+<div class="menubtn">
+<div>
+<button class="vorod" onclick="opentab1('logintab')"><span><img src="icons/user.svg" alt=""><p>ورود / ثبت نام </p</span></button></div>
+<div>
+<button class="peigiri a-menu"  onclick="opentab('peygiri-kharid')"><span> <img src="icons/ticket.svg" alt=""><p> پیگیری خرید </p> </span></button></div>
+</div>
+</div>
+<!-- ****************************************************** -->
+<main>
+<section class=" archive  tab " id="archive">
+    <div class="plans">
+    <div class="plans-title">
+    <h1>آرشیو برنامه ها</h1>
+    </div>
+    <div class="plan-articles">
+        <a  href="/aliyasini.html" class="soldout-plan">
+            <img src="./singer-imgs/ali-yasini.jpeg" alt="" class="singer">
+            <img src="./icons/k.png" alt="" class="soldout-1">
+            <div class="concert-city"><span>تهران</span></div>
+            <div class="concert-info " >
+            <h1><span>کنسرت</span>علی یاسینی</h1>
+            <p> <img src="./icons/free_icon_1(1).svg" alt=""> تهران ، مرکز همایشهای برج میلاد</p>
+            <p> <img src="./icons/calendar.svg" alt=""> یکشنبه 25 تیر ماه </p>
+            </div>
+            </a>
+            <a href="/makanband.html" class="soldout-plan" ><img src="./singer-imgs/macan.jpeg" alt=""
+            class="singer">
+            <img src="./icons/k.png" alt="" class="soldout-1">
+            <div class="concert-city"><span>تهران</span></div>
+            
+            <div class="concert-info">
+            <h1><span>کنسرت</span>ماکان بند</h1>
+            <p> <img src="./icons/free_icon_1(1).svg" alt=""> تهران ، مرکز همایشهای برج میلاد</p>
+            <p> <img src="./icons/calendar.svg" alt="">یکشنبه 25 تیر ماه</p>
+            </div>
+            </a>
+            <a href="/sohrabpakzad.html" class="soldout-plan " > <img src="./singer-imgs/sohrab.jpeg" alt=""
+            class="singer">
+            <img src="./icons/k.png" alt="" class="soldout-1">
+            <div class="concert-city"><span>تهران</span></div>
+            
+            <div class="concert-info">
+            <h1><span>کنسرت</span>سهراب پاکزاد</h1>
+            <p><img src="./icons/free_icon_1(1).svg" alt=""> تهران ، مرکز همایشهای برج میلاد </p>
+            <p> <img src="./icons/calendar.svg" alt=""><span class="dateconcert">25 </span>   یکشنبه تیر ماه </p>
+            </div>
+            </a>
+            <a href="/aliyasini.html" class="plan"><img src="./singer-imgs/ali-yasini.jpeg" alt="" class="singer">
+            <div class="concert-city"><span>کیش</span></div>
+            
+            <div class="concert-info ">
+            <h1><span>کنسرت</span>علی یاسینی</h1>
+            <p> <img src="./icons/free_icon_1(1).svg" alt=""> کیش ، تالار شهر </p>
+            <p> <img src="./icons/calendar.svg" alt="">یکشنبه 25 تیر ماه </p>
+            </div>
+            </a>
+    <a href="/rezasadeqi.html" class="soldout-plan">
+    <img src="./singer-imgs/rezasadeqi.jpeg" alt="" class="singer">
+    <img src="./icons/k.png" alt="" class="soldout-1">
+    <div class="concert-city"><span>اصفهان</span></div>
+    
+    <div class="concert-info">
+    <h1><span>کنسرت</span>رضا صادقی</h1>
+    <p> <img src="./icons/free_icon_1(1).svg" alt=""> اصفهان ، سالن سیتی سنتر</p>
+    <p> <img src="./icons/calendar.svg" alt=""> سه شنبه 20 تیر ماه </p>
+    </div>
+    </a>
+    <a href="/sevenband.html" class="plan">
+        <img src="./singer-imgs/sevenband.jpeg" alt="" class="singer">
+        <div class="concert-city"><span>کرج</span></div>
+        
+        <div class="concert-info">
+        <h1><span>کنسرت</span>گروه سون</h1>
+        <p> <img src="./icons/free_icon_1(1).svg" alt=""> کرج ، تالار حافظ  </p>
+        <p> <img src="./icons/calendar.svg" alt=""> سه شنبه 20 تیر ماه </p>
+        </div>
+        </a>
+        <a href="/arminzare.html" class="soldout-plan">
+            <img src="./singer-imgs/arminzare.jpeg" alt="" class="singer">
+            <div class="tamdid"><img src="/icons/check.svg" alt=""> تمدید شد</div>
+            <img src="./icons/k.png" alt="" class="soldout-1">
+            <div class="concert-city"><span>تهران</span></div>
+            <div class="concert-info">
+            <h1><span>کنسرت</span>آرمین  زارع</h1>
+            <p> <img src="./icons/free_icon_1(1).svg" alt=""> تهران ، سالن   میلاد نمایشگاه های بین الملل</p>
+            <p> <img src="./icons/calendar.svg" alt=""> سه شنبه 20 تا 21  تیر ماه </p>
+            </div>
+            </a>
+            <a href="/sohrabpakzadsanandaj.html" class="plan " > <img src="./singer-imgs/sohrab.jpeg" alt=""
+                class="singer">
+                <div class="concert-city"><span>سنندج</span></div>
+                
+                <div class="concert-info">
+                <h1><span>کنسرت</span>سهراب پاکزاد</h1>
+                <p><img src="./icons/free_icon_1(1).svg" alt=""> سنندج ، سالن فجر  </p>
+                <p> <img src="./icons/calendar.svg" alt=""><span class="dateconcert">25 </span>   سه شنبه 20 تیر ماه </p>
+                </div>
+                </a>
+                <a href="aliyasini" class="soldout-plan">
+                    <img src="./singer-imgs/ali-yasini.jpeg" alt="" class="singer">
+                    <img src="./icons/k.png" alt="" class="soldout-1">
+                    <div class="concert-city"><span>تهران</span></div>
+                    
+                    <div class="concert-info">
+                    <h1><span>کنسرت</span>علی یاسینی</h1>
+                    <p> <img src="./icons/free_icon_1(1).svg" alt=""> تهران ، مرکز همایشهای برج میلاد</p>
+                    <p> <img src="./icons/calendar.svg" alt=""> یکشنبه 25 تیر ماه </p>
+                    </div>
+                    </a>
+                    
+    <a href="aliyasini" class="soldout-plan">
+        <img src="./singer-imgs/ali-yasini.jpeg" alt="" class="singer">
+        <img src="./icons/k.png" alt="" class="soldout-1">
+        <div class="concert-city"><span>تهران</span></div>
+        
+        <div class="concert-info">
+        <h1><span>کنسرت</span>علی یاسینی</h1>
+        <p> <img src="./icons/free_icon_1(1).svg" alt=""> تهران ، مرکز همایشهای برج میلاد</p>
+        <p> <img src="./icons/calendar.svg" alt=""> یکشنبه 25 تیر ماه </p>
+        </div>
+        </a>
+        <a href="aliyasini" class="soldout-plan">
+            <img src="./singer-imgs/ali-yasini.jpeg" alt="" class="singer">
+            <img src="./icons/k.png" alt="" class="soldout-1">
+            <div class="concert-city"><span>تهران</span></div>
+            
+            <div class="concert-info">
+            <h1><span>کنسرت</span>علی یاسینی</h1>
+            <p> <img src="./icons/free_icon_1(1).svg" alt=""> تهران ، مرکز همایشهای برج میلاد</p>
+            <p> <img src="./icons/calendar.svg" alt=""> یکشنبه 25 تیر ماه </p>
+            </div>
+            </a>
+            <a href="aliyasini" class="soldout-plan">
+                <img src="./singer-imgs/ali-yasini.jpeg" alt="" class="singer">
+                <img src="./icons/k.png" alt="" class="soldout-1">
+                <div class="concert-city"><span>تهران</span></div>
+                
+                <div class="concert-info">
+                <h1><span>کنسرت</span>علی یاسینی</h1>
+                <p> <img src="./icons/free_icon_1(1).svg" alt=""> تهران ، مرکز همایشهای برج میلاد</p>
+                <p> <img src="./icons/calendar.svg" alt=""> یکشنبه 25 تیر ماه </p>
+                </div>
+                </a>
+    </div>
+    </div>
+<div class="next-page">
+    <span>صفحه ۱</span>
+    <a href=""> بعدی > ></a>
+</div>
+</section>
+<section class="peygiri-kharid tab " id="peygiri-kharid">
+    <div class="peygiridiv">
+    <h1>خریدها</h1>
+    <div class="peygiri-content">
+      <span>با ورود موبایل و تایید آن به همه خریدهای خود دسترسی خواهید داشت: </span>
+      <button class="p-kh-b bthover"> ورود و تایید موبایل</button>
+      <span class="p2-peygiri">همچنین اگر به کد پیگیری خود دسترسی دارید می‌توانید با کد پیگیری و شماره تلفن همراهی که هنگام خرید وارد نمودید، رسید خود را بیابید:</span>
+      <label for="">کد  پیگیری:</label>
+      <input type="text" class="peygiri-input">
+      <label for="" >تلفن همراه:</label>
+      <input type="text" class="peygiri-input">
+      <button class="p-kh-b bthover">جستجو</button>
+    </div>
+    </div>
+</section>
+<section class="tab loginsec"  id="logintab">
+<div class="login1 " >
+<div class="login">
+    <button class="xbutton " >x</button>
+    <div class="login-header">
+<button>ورود با رمز </button>
+<button>ورود با پیامک</button>
+<div class="border"></div>
+<button> عضویت</button>
+    </div>
+    <div class="login-content  " id="login-content1">
+        <div class="login-input">
+        <label for="">نام کاربری یا موبایل :</label>
+        <input  type="text" >
+    </div>
+   
+    <div class="login-input">
+    <label for=""> رمز :</label>
+    <input type="password" >  
+</div>
+<div class="faramooshi">
+<a href="">›› فراموشی رمز یا نام کاربری</a>
+<button class="login-vorood-b">ورود</button></div>
+</div>
+<div class="login-content login-content2 " id="login-content2">
+    <div class="login-input">
+        <label for="">شماره همراه:</label>
+        <input  type="text" >
+    </div>
+   
+    <button class="login-vorood-b ">ورود</button>
+
+</div>
+<div class="lg">
+<button class="login-google"> <div class="googlelogo"> <img src="./icons/google.svg" alt=""></div>ورود یا عضویت با گوگل </button></div>
+<div class="login-footer">
+    <p>بر پایه زیربنا</p> <a class="zirbana-img"  href="https://www.zirbana.com/"><img src="./icons/zirbana.png" alt=""></a>
+</div>
+
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="footer">
+    
+<div class="footer-content">
+<div class="div-1-f">
+<div class="footer-logo1">
+<img src="./icons/honarticket_logo.png" alt="">
+</div>
+<a href="/" > برنامه‌ها</a>
+<a href="/tamas-tab.html" class="a-tamas-footer"> تماس و پشتیبانی</a>
+<a href="/darbarema-tab.html" class="a-darbare-footer">درباره ما</a>
+<a  href="/archive.html" class="a-archive-footer">آرشیو برنامه ها</a>
+</div>
+<div class="div-1-f">
+<div class="div-f-title">
+<img src="./icons/menu-dots.svg" alt="">
+<h1> دسته بندی ها</h1>
+</div>
+<a href="/archive.html">همه برنامه ها</a>
+<a href=""> کنسرت های تهران</a>
+<a href="">کنسرت سایر شهرها</a>
+<a href="">کنسرت -نمایش ها</a>
+<a href="">به زودی ...</a>
+</div>
+<div class="div-1-f">
+<div class="div-f-title"> <img src="./icons/question.svg" alt="">
+<h1>راهنما</h1>
+</div>
+<a  onclick="opentab('peygiri-kharid')">پیگیری خرید</a>
+<a href="/tamas-tab.html">ثبت مشکل یا طرح پرسش</a>
+
+</div>
+<div class="div-1-f">
+<div class="div-f-title"> <img src="./icons/pin-round.svg" alt="">
+<h2>نشانی</h2>
+</div>
+<span>تهران، ولنجک، خیابان سیزدهم، خیابان ساسان، پلاک ۳۳، طبقه ۵، واحد </span>
+<div class="div-f-title"> <img src="./icons/call-calling.svg" alt="">
+<h3>تلفن تماس</h3>
+</div>
+<span>
+۰۲۱ - ۲۸۴۲۴۳۴۳</span>
+</div>
+</div>
+<div class="footer-down">
+
+<div class="footer-contact">
+<p>ما را در شبکه های اجتماعی دنبال کنید</p> <a href="https://t.me/honarticket"><img src="./icons/telegram.svg" alt=""></a>
+<a href="https://www.instagram.com/honarticket"><img src="./icons/instagram.svg" alt=""></a>
+</div>
+<div><img src="./icons/logoetemad.png" alt=""></div>
+</div>
+</footer>
+<script src="./javascript/app.js"></script>
+</body>
+</html>

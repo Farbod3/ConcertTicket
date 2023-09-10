@@ -3,6 +3,7 @@ using Data.Repository.GenericRepository;
 using Data.Repository.IGenericRepository;
 using DTOs;
 using Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebFramework.BaseController;
 
@@ -20,11 +21,11 @@ public class AddTicketController : BaseController
     }
 
     [HttpPost]
-    public async Task<ActionResult> Creat(TicketDto dto)
+    public async Task<ActionResult> Create(TicketDto dto)
     {
         var ticket = _mapper.Map<Ticket>(dto);
         await _repository.AddAsync(ticket , new CancellationToken(),true);
         var result = _mapper.Map<TicketSelectDto>(ticket);
-        return new JsonResult(result);
+        return Ok(result);
     }
 }

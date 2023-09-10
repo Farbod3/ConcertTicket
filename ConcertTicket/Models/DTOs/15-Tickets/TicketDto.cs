@@ -3,7 +3,7 @@ using WebFramework.Mapper;
 
 namespace DTOs;
 
-public class TicketDto 
+public class TicketDto : BaseDto<TicketDto, Ticket,long>
 {
     public DateOnly? Term { get; set; }
     public TimeOnly? Time { get; set; }

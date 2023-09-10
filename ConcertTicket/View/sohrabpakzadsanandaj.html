@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>honarticket</title>
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="./style/responsive.css">
+<script src="https://kit.fontawesome.com/d37833161d.js" crossorigin="anonymous"></script>
+<!-- <script src="./javascript/app.js"></script>/ -->
+</head>
+<body>
+    <div class="menu-phone" id="menu-phone">
+        <div class="login1 " >
+        <div class="menuonphone">
+            <button class="xmenu"><i class="fa-solid fa-x" style="color: #000000; font-weight:400; padding:4px 0.6rem; border-radius: 6px;"></i></button>
+            <div class="menu-phone-up">
+            <img src="icons/user-w.svg" alt="">
+            <button class=" vorod-mobile" onclick="opentab1('logintab')"><span><p>ورود / ثبت نام </p</span></button>
+        </div>
+            <div class="menubar-phone">
+                <a href="index.html" class="  activem1 hb" > <i class="fa-solid fa-table-cells-large" style="color:  rgb(179, 197, 217); "></i> برنامه ها</a>
+                
+                <a href="/tamas-tab.html"  class=" tamas-tab"> <i class="fa-solid fa-phone" style="color:  rgb(179, 197, 217);"></i>تماس و پشتیبانی</a>
+                <a href="/darbarema-tab.html" class=" darbare-tab" ><i class="fa-solid fa-volume-low" style="color:  rgb(179, 197, 217);"></i> درباره ما</a>
+                <a href="/archive.html"  class="archive-a"  ><i class="fa-solid fa-table-cells-large" style="color:  rgb(179, 197, 217);"></i>آرشیو</a>
+                <a   class="archive-a"  ><i class="fa-solid fa-ticket" style="color:  rgb(179, 197, 217);"></i>پیگیری خرید</a>
+            </div>
+        </div>
+    </div>
+        </div>
+<div class="container">
+    <div class="navbar" id="navbar">
+    <div class="menu">
+        <div class="menuicon " onclick="openmenu('menu-phone','navbar')">
+    <img src="icons/menu.png" alt="">
+    </div>
+    <div class="menulogo">
+    <img src="./icons/honarticket_logo.png" alt="">
+    </div>
+    <div class="menubar">
+      <a href="index.html" class="a-menu  hb" > برنامه ها</a>
+      <a href="/tamas-tab.html"  class="a-menu tamas-tab"  >تماس و پشتیبانی</a>
+      <a href="/darbarema-tab.html" class="a-menu darbare-tab" > درباره ما</a>
+      <a href="/archive.html"  class="a-menu archive-a"  >آرشیو</a>
+    </div>
+    </div>
+    <div class="menubtn">
+    <div>
+    <button class="vorod" onclick="opentab1('logintab')"><span><img src="icons/user.svg" alt=""><p>ورود / ثبت نام </p</span></button></div>
+    <div>
+    <button class="peigiri a-menu"  onclick="opentab('peygiri-kharid')"><span> <img src="icons/ticket.svg" alt=""><p> پیگیری خرید </p> </span></button></div>
+    </div>
+    </div>
+<main>
+    <section class="peygiri-kharid tab " id="peygiri-kharid">
+        <div class="peygiridiv">
+        <h1>خریدها</h1>
+        <div class="peygiri-content">
+          <span>با ورود موبایل و تایید آن به همه خریدهای خود دسترسی خواهید داشت: </span>
+          <button class="p-kh-b bthover"> ورود و تایید موبایل</button>
+          <span class="p2-peygiri">همچنین اگر به کد پیگیری خود دسترسی دارید می‌توانید با کد پیگیری و شماره تلفن همراهی که هنگام خرید وارد نمودید، رسید خود را بیابید:</span>
+          <label for="">کد  پیگیری:</label>
+          <input type="text" class="peygiri-input">
+          <label for="" >تلفن همراه:</label>
+          <input type="text" class="peygiri-input">
+          <button class="p-kh-b bthover">جستجو</button>
+        </div>
+        </div>
+    </section>
+    <section class="tab loginsec"  id="logintab">
+    <div class="login1 " >
+    <div class="login">
+        <button class="xbutton">x</button>
+        <div class="login-header">
+    <button>ورود با رمز </button>
+    <button>ورود با پیامک</button>
+    <div class="border"></div>
+    <button> عضویت</button>
+        </div>
+        <div class="login-content  " id="login-content1">
+            <div class="login-input">
+            <label for="">نام کاربری یا موبایل :</label>
+            <input  type="text" >
+        </div>
+       
+        <div class="login-input">
+        <label for=""> رمز :</label>
+        <input type="password" >  
+    </div>
+    <div class="faramooshi">
+    <a href="">›› فراموشی رمز یا نام کاربری</a>
+    <button class="login-vorood-b">ورود</button></div>
+    </div>
+    <div class="login-content login-content2 " id="login-content2">
+        <div class="login-input">
+            <label for="">شماره همراه:</label>
+            <input  type="text" >
+        </div>
+       
+        <button class="login-vorood-b ">ورود</button>
+    
+    </div>
+    <div class="lg">
+    <button class="login-google"> <div class="googlelogo"> <img src="./icons/google.svg" alt=""></div>ورود یا عضویت با گوگل </button></div>
+    <div class="login-footer">
+        <p>بر پایه زیربنا</p> <a class="zirbana-img"  href="https://www.zirbana.com/"><img src="./icons/zirbana.png" alt=""></a>
+    </div>
+    
+    </div>
+    </div>
+    </section>
+    <section class="sohrabtab tab " id="sohrabtab" >
+        <div class="concert-header">
+            <div class="c-h-num"><span class="num">1</span><span class="c-h-p">انتخاب سانس</span></div>
+            <div class="c-h-num"><span class="num">2</span><span class="c-h-p">انتخاب  صندلی</span></div>
+            <div class="c-h-num"><span class="num">3</span><span class="c-h-p">رزرو و پرداخت</span></div>
+            <div class="c-h-num"><span class="num">4</span><span class="c-h-p">دریافت بلیت </span></div>
+        </div>
+        <div class="concert-singer-img">
+            <img src="https://static.honarticket.com/resource/files/cache/0effb72e4da64753.951409.jpeg" alt="">
+        </div>
+        <div class="concert-details">
+            <div class="details">
+    <span class="c-d-icon" > <img src="./icons/11.svg" alt=""></span>
+    <span class="c-d-lable"> دوره اجرا: </span>
+    <span class="c-d-info tarikh-concert">سه شنبه 20 تیر</span>
+    </div>
+    <div class="details ">
+    <span class="c-d-icon" > <img src="./icons/time-history.svg" alt=""></span>
+    <span class="c-d-lable">ساعت: </span>
+    <span class="c-d-info c-time">19:50و 22:50</span>
+    </div>
+    <div class="details makan-details">
+    <span class="c-d-icon" > <img src="./icons/pin-round.svg" alt=""></span>
+    <span class="c-d-lable">محل برگزاری: </span>
+    <span class="c-d-info salon salonb"> سنندج، سالن فجر - سنندج</span>
+    <span class="c-d-info salon-address salonb"> نشانی: سنندج، بلوار گریاشان، پایین تر از دادگستری، مجتمع فرهنگی هنری فجر ظ 	</span>
+    <span class="c-d-info salon-phone">تلفن: ۸۴۳۶۱۰۰۰</span>
+    </div>
+        </div>
+        <div class="concertmap" style="flex-basis: 30rem; margin-top: 1rem;">
+            <img style="width: 100%;" src="./icons/Screenshot 2023-07-26 at 18-37-13 هنرتیکت خرید اینترنتی بلیت کنسرت علی یاسینی.png" alt="">
+        </div>
+        <div class="concert-rules">
+            <div class="ruletitle">
+            <span class="rulesicon"><img src="./icons/bellalert.svg" alt=""></span>
+            <h1>قوانین و اطلاعیه‌ها</h1>
+            <span class="alert">توجه نمایید خرید از این سایت به منزله پذیرش قوانین زیر است:</span>
+        </div>
+        <div class="rules">
+    <p>	۱. در خرید خود دقت و توجه لازم را داشته باشید زیرا امکان جابجایی یا لغو آن وجود ندارد.</p>
+    <p>۲. پس از پایان پرداخت در درگاه بانک، با دکمه «تکمیل فرآیند خرید» به هنرتیکت بازگردید.</p>
+    <p> ۳. تنها رسید هنرتیکت نشانه نهایی شدن خرید شماست و رسید بانکی معیار خرید موفق نیست.</p>
+    <p>۴. با آغاز روند خرید، ۱۵ دقیقه فرصت پرداخت برای نهایی‌سازی رزرو موقت وجود دارد.</p>
+    <p>۵. داشتن پوشش کامل و رعایت حجاب کامل اسلامی جهت ورود به سالن برگزاري الزامیست.</p>
+    <p>۶. داشتن بلیط براي افراد بالای ۴ سال الزامیست.</p>
+    <p>۷. لطفا یک ساعت قبل از ساعت شروع اجرا، در محل برگزاری تشریف داشته ‌باشید.</p>
+    <p>۸. استعمال دخانیات و همراه داشتن هرنوع خوراکی در سالن اصلی برنامه ممنوع و از ورود آن ها جلوگیری می شود.</p>
+    <p>
+        ۹. براي جلوگیري از بی نظمی، هنگام اجرا از ورود افراد به داخل سالن جلوگیری خواهد شد و تا اتمام قطعه یا بخش درحال اجرا ، درب هاي سالن بسته می ماند.</p>
+    <p>۱۰. در صورت وجود هرگونه مشکل در زمان خرید بلیط و ورود به سالن، با پشتبانی تماس بگیرید.</p>
+    <p>۱۱. هنرتیکت تنها در روند خرید بلیط و ورود به سالن متعهد خواهد بود و برگزاری برنامه بر عهده این سایت نمی باشد.</p>
+    <p>
+        ۱۲. این سامانه تنها در قبال خرید شما از سایت هنرتیکت و مراکز معتبر اعلام شده متعهد خواهد بود.</p>
+    </div>
+    <button class="ticketprice " onclick="opentab2('pricetab')"> مشاهده قیمت بلیت ها </button>
+    <div class="tab pricetab"  id="pricetab">
+    <div class="login1">
+        <div class="ticket-p ">
+            <div class="ticket-p-h ">
+            <h1>قیمت بلیت ها</h1>
+            <button class="x-price x-b" >x</button></div>
+    <span class="ticketprices">  
+        همکف، از ردیف ۱ تا ۲: ۴۵۰,۰۰۰ تومان
+        <br>
+        
+        همکف، از ردیف ۳ تا ۴: ۴۳۰,۰۰۰ تومان
+        <br>
+        همکف، از ردیف ۵ تا ۶: ۴۱۰,۰۰۰ تومان
+        <br>
+        همکف، از ردیف ۷ تا ۸: ۴۰۰,۰۰۰ تومان
+        <br>
+        همکف، از ردیف ۹ تا ۱۱: ۳۸۰,۰۰۰ تومان
+        <br>
+        همکف، از ردیف ۱۲ تا ۱۴: ۳۶۰,۰۰۰ تومان
+        <br>
+        همکف، از ردیف ۱۵ تا ۱۶: ۳۳۰,۰۰۰ تومان
+        <br>
+        + ۹% مالیات ارزش‌افزوده	
+    </span>
+    </div>
+    </div>
+    </div>
+    <div class="sans"><h1> انتخاب سانس :</h1>
+        <div>
+    <a href="">یکشنبه 25 تیر ساعت 19:50</a> <button class="sans-next">انتخاب صندلی</button></div>
+    <div>
+    <a href="">یکشنبه 25 تیر ساعت 22:50</a> <button class="sans-next">انتخاب صندلی</button></div>
+    </div>
+    </section>
+</main>
+
+
+</div>
+<script src="./javascript/app.js"></script>
+<script src="./javascript/app2.js"></script>
+</body>
