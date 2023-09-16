@@ -1,11 +1,14 @@
-﻿using AutoMapper;
+﻿using System.Security.Claims;
+using AutoMapper;
 using ConcertTicket.Models;
+using Data.Repository.IGenericRepository;
 using Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Service.IJWT;
 using Service.JWT;
+using Stimulsoft.System.Windows.Forms;
 using WebFramework.BaseController;
 using UserLoginDto = ConcertTicket.Models.DTOs.UserLoginDto; 
 
@@ -17,11 +20,13 @@ public class UserController : BaseController
     private readonly SignInManager<User> _signInManager;
     private readonly IJwtManager _Jwt;
     private readonly IMapper _mapping;
+    private readonly IRepository<User> _repository;
 
     public UserController(UserManager<User> userManager, IJwtManager jwt, IMapper mapper,
-        SignInManager<User> signInManager)
+        SignInManager<User> signInManager, IRepository<User> repository)
     {
         _signInManager = signInManager;
+        _repository = repository;
         _userManager = userManager;
         _Jwt = jwt;
         _mapping = mapper;
@@ -29,7 +34,7 @@ public class UserController : BaseController
 
 
     [HttpPost]
-    public async Task<ActionResult<UserSelectDto>> Signup([FromQuery] UserDto dto)
+    public async Task<ActionResult<UserSelectDto>> Signup( UserDto dto)
     {
         var code = "3223";
         var model = new User
@@ -37,7 +42,7 @@ public class UserController : BaseController
             FirstName = dto.FirstName,
             LastName = dto.LastName,
             Gender = dto.Gender,
-            Email = dto.Email,
+            // Email = dto.Email,
             UserName = dto.UserName,
             PhoneNumber = dto.PhoneNumber,
             SMSCode = dto.SMSCode
@@ -48,13 +53,14 @@ public class UserController : BaseController
         }
 
         await _userManager.CreateAsync(model, dto.Password!);
+        // var token = await _Jwt.CreateToken(model);
         var map = _mapping.Map<UserSelectDto>(model);
-        return Ok(map);
+        return new JsonResult(map);
     }
 
 
     [HttpPost]
-    public async Task<ActionResult<Token>> LoginUser([FromQuery] UserLoginDto dto)
+    public async Task<ActionResult<Token>> LoginUser( UserLoginDto dto)
     {
         var user = await _userManager.FindByNameAsync(dto.UserName!);
         if (user == null)
@@ -78,6 +84,20 @@ public class UserController : BaseController
         // var token = await _Jwt.GenerateToken(result);
         // return new JsonResult(token);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> AllUsers()
+    {
+        var model = _repository.GetAllASync(new CancellationToken());
+        return Ok(model);
+
+        // var claimType = "Role";
+        // var claimValue = "User";
+        // var claim = new Claim(claimType, claimValue);
+        // var model = _userManager.GetUsersForClaimAsync(claim);
+        // return Ok(model);
+    }
+    
 
     [HttpPost, Authorize]
     public async Task<ActionResult> ResetPassword(PasswordResetDto dto)

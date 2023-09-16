@@ -13,6 +13,7 @@ public static class AddMyMiddlewares
         return builder.UseMiddleware<MyMiddleware>();
     }
 }
+
 public class MyMiddleware  
 {
     private readonly RequestDelegate _next;

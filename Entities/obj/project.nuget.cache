@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iHXw1zIRinviKe3CGfOBtrF48o6H4DUk2frmdp8uoy4Ie2DzsPy316gfNC3lsZmGWTqHzpvW0AMMBwTh7UfehA==",
+  "dgSpecHash": "68j1G+S+vG61YXiUmly/+SKUniETvQwP6tN56sBUc/E3T9DsXyX0K3gwDmyqgY4NmADABetDsR1AuNSY9AnI2Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\IT LAND\\Desktop\\ConcertTicket\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\IT LAND\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\IT LAND\\.nuget\\packages\\iran.aspnet.countrydivisions\\2.1.5\\iran.aspnet.countrydivisions.2.1.5.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.7\\microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
@@ -114,7 +115,7 @@
     "C:\\Users\\IT LAND\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\IT LAND\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\IT LAND\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\rick.docs.samples.routeinfo\\1.0.0.8\\rick.docs.samples.routeinfo.1.0.0.8.nupkg.sha512",
     "C:\\Users\\IT LAND\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

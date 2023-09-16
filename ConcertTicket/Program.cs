@@ -4,6 +4,7 @@ using WebFramework.Middleware;
 using WebFramework.ServiceExtension;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Iran.AspNet.CountryDivisions.Helpers;
 using Microsoft.OpenApi.Models;
 using WebFramework.FarbodAutoFac;
 
@@ -16,7 +17,8 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+ // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 // builder.Services.AddMySwagger();
 var cs = builder.Configuration.GetConnectionString("sqlite")!;
@@ -51,13 +53,23 @@ builder.Services.AddSwaggerGen(opt =>
 builder.Services.AddLogging();
 // builder.Services.AddScoped (typeof(IRepository<>),typeof(Repository<>));
 // builder.Services.AddScoped(typeof(IJwtManager),typeof(JwtManager));
-builder.Services.AddAutoMapper(typeof(ICustomMapping));
-
+builder.Services.AddAutoMapper(typeof(MappingConfigs));
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ClientPermission", policy =>
+    {
+        policy.WithOrigins("*")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+     
+    });
+});
 // builder.Services.AddDbContext<ConcertTicketDbContext>(p =>
 //     p.UseSqlite(builder.Configuration.GetConnectionString("sqlite")));
 
 
 builder.Services.AddAuthentication();
+builder.Services.ConfigureCities();
 builder.Services.ConfigureJwt(builder.Configuration );
 builder.Services.IdentityConfig();
 
@@ -72,6 +84,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("ClientPermission");
 
 app.UseStaticFiles();
 app.MyMiddleware();

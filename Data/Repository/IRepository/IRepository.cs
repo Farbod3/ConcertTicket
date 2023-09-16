@@ -12,7 +12,7 @@ public interface IRepository<TEntity> where TEntity : class
 
     void Add(TEntity? entity, bool saveNow = true);
     Task AddAsync(TEntity? entity, CancellationToken cancellationToken, bool saveNow = true);
-    public IEnumerable<TEntity> GetAll(CancellationToken cancellationToken);
+    public IEnumerable<TEntity> GetAllASync(CancellationToken cancellationToken , bool saveNow = true);
     void AddRange(IEnumerable<TEntity?> entities, bool saveNow = true);
     Task AddRangeAsync(IEnumerable<TEntity?> entities, CancellationToken cancellationToken, bool saveNow = true);
     void Attach(TEntity? entity);
@@ -22,7 +22,7 @@ public interface IRepository<TEntity> where TEntity : class
     Task DeleteRangeAsync(IEnumerable<TEntity?> entities, CancellationToken cancellationToken, bool saveNow = true);
     void Detach(TEntity entity);
     TEntity? GetById(params object[] ids);
-    Task<TEntity?> GetByIdAsync(CancellationToken cancellationToken, params object[] ids);
+    Task<TEntity?> GetByIdAsync(long cancellationToken);
 
     void LoadCollection<TProperty>(TEntity? entity,
         Expression<Func<TEntity, IEnumerable<TProperty>>> collectionProperty) where TProperty : class;
@@ -44,4 +44,5 @@ public interface IRepository<TEntity> where TEntity : class
     Task UpdateRangeAsync(IEnumerable<TEntity?> entities, CancellationToken cancellationToken, bool saveNow = true);
     void Dispose();
 
+    
 }

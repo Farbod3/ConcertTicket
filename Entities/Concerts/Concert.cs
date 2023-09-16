@@ -7,23 +7,28 @@ namespace Entities;
 
 public class Concert : BaseEntity
 {
-    [Required]
-    [MaxLength(100)]
+    public string? Image { get; set; }
     public string? Title { get; set; }
-    [Required]
-    [MaxLength(100)]
-    public string? SingerName { get; set; }
+    public string? Location { get; set; }
+    public string? CityName { get; set; }
+    public string? Days { get; set; }
+    public string? Time { get; set; }  
+    public string? Prices { get; set; }
+    // public string? PhoneNumber { get; set; }
+    public bool? IsActive { get; set; }
     
+    
+    // public string? SingerName { get; set; }
     // public long? ArchiveId { get; set; }
     // public Archive? Archive { get; set; }
-    public List<Ticket> Tickets { get; set; }
-    public long? SingerId { get; set; }
-    public Singer Singer { get; set; }
+    public List<Ticket>? Tickets { get; set; }
+    // public long? SingerId { get; set; }
+    // public Singer Singer { get; set; }
 
 
-    public List<Reservation> Reservations { get; set; }
+    public List<Reservation>? Reservations { get; set; }
     public long? CityId { get; set; }
-    public City City { get; set; }
+    public City? City { get; set; }
 }
 
 #region Fluent&Relations
@@ -34,25 +39,18 @@ public class ConcertTypeConfiguration : IEntityTypeConfiguration<Concert>
     {
 
         #region Fluent
- 
-         builder.Property(t=>t.Title)
-             .IsUnicode(true)
-             .HasMaxLength(100)
-             .IsConcurrencyToken()
-             .IsRowVersion();
-         builder.Property(s=>s.SingerName)
-             .IsUnicode(true)
-             .HasMaxLength(100)
-             .IsConcurrencyToken()
-             .IsRowVersion();
+
+         builder.Property(t => t.Title)
+            .HasMaxLength(100);
+         // builder.Property(s => s.SingerName)
+         //     .HasMaxLength(100);
         
 
         #endregion
-        
-        
-        builder.HasOne(a => a.Singer)
-            .WithMany(b => b.Concerts)
-            .HasForeignKey(c => c.SingerId);
+
+        // builder.HasOne(a => a.Singer)
+        //     .WithMany(b => b.Concerts)
+        //     .HasForeignKey(c => c.SingerId);
         builder.HasOne(g => g.City)
             .WithMany(h => h.Concerts)
             .HasForeignKey(i => i.CityId);

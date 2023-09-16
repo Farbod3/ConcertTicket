@@ -15,7 +15,7 @@ public class UserDto : IValidatableObject
     // [DataType(DataType.Password)]
     public string? Password { get; init; }
     public string? SMSCode { get; set; }
-    public string? Email { get; init; }
+    // public string? Email { get; init; }
     public string? PhoneNumber { get; init; }
     
     #region Validation
@@ -36,19 +36,19 @@ public class UserDto : IValidatableObject
         if (userDto.UserName.Length < 3)
             yield return new ValidationResult("UserName is too short");
         
-        if (string.IsNullOrEmpty(Email))
-        {
-            yield return new ValidationResult("لطفا ایمیل خود را وارد کنید.");
-        }
-        else
-        {
-            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-
-            if (!Regex.IsMatch(Email, emailPattern))
-            {
-                yield return new ValidationResult("ایمیل نامعتبر است.");
-            }
-        }
+        // if (string.IsNullOrEmpty(Email))
+        // {
+        //     yield return new ValidationResult("لطفا ایمیل خود را وارد کنید.");
+        // }
+        // else
+        // {
+        //     string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+        //
+        //     if (!Regex.IsMatch(Email, emailPattern))
+        //     {
+        //         yield return new ValidationResult("ایمیل نامعتبر است.");
+        //     }
+        // }
         
         if (string.IsNullOrEmpty(PhoneNumber))
         {
@@ -66,11 +66,11 @@ public class UserDto : IValidatableObject
         }
         else
         {
-            string passPattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$";
+            string passPattern = @"^.{8,}$";
             if (!Regex.IsMatch(Password, passPattern))
             {
                 yield return new ValidationResult(
-                    "حداقل باید 8 کارکتر ، یک حرف بزگ ، یک حرف کوچک ،یک عدد و یک کارکتر مثل @ ، داشته باشد");
+                    "رمز عبور باید حداقل باید 8 کارکتر داشته باشد");
             }
         }
     

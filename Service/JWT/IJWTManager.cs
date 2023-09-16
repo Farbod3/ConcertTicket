@@ -7,5 +7,6 @@ namespace Service.IJWT;
 public interface IJwtManager
 {
     Task<TokenResult> GenerateToken(User signInResult);
+    // Task<TokenResult> CreateToken(User token);
 
 }

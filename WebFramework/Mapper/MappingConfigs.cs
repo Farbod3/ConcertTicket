@@ -5,6 +5,7 @@ namespace WebFramework.Mapper;
 
 public class MappingConfigs : Profile
 {
+    private ICustomMapping _customMappingImplementation;
     public MappingConfigs()
     {
         var allTypes = Assembly.GetEntryAssembly()!.GetExportedTypes()

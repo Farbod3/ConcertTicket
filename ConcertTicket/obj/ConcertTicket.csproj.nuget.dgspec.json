@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "Iran.AspNet.CountryDivisions": {
+              "target": "Package",
+              "version": "[2.1.5, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -212,6 +216,10 @@
             "Autofac.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Iran.AspNet.CountryDivisions": {
+              "target": "Package",
+              "version": "[2.1.5, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -368,6 +376,10 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "Iran.AspNet.CountryDivisions": {
+              "target": "Package",
+              "version": "[2.1.5, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -512,6 +524,10 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
+            },
+            "Iran.AspNet.CountryDivisions": {
+              "target": "Package",
+              "version": "[2.1.5, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -664,6 +680,10 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "Iran.AspNet.CountryDivisions": {
+              "target": "Package",
+              "version": "[2.1.5, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -813,6 +833,10 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
+            },
+            "Iran.AspNet.CountryDivisions": {
+              "target": "Package",
+              "version": "[2.1.5, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

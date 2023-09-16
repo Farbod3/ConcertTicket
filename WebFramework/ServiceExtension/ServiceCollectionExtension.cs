@@ -2,6 +2,7 @@
 using System.Text;
 using Data;
 using Entities;
+using Iran.AspNet.CountryDivisions.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
@@ -34,6 +35,11 @@ public static class ServiceCollectionExtension
             })
             .AddEntityFrameworkStores<ConcertTicketDbContext>()
             .AddDefaultTokenProviders();
+    }
+
+    public static void ConfigureCities(this IServiceCollection services)
+    {
+        services.AddIranCountryDivisions();
     }
 
     public static void ConfigureJwt(this IServiceCollection services, IConfiguration configuration)

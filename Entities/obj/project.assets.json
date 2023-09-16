@@ -134,6 +134,28 @@
           }
         }
       },
+      "Iran.AspNet.CountryDivisions/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.1/Iran.AspNet.CountryDivisions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Iran.AspNet.CountryDivisions.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.1/Data/DataBase/locations.db": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Data/DataBase/locations.db"
+          }
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.7": {
         "type": "package",
         "dependencies": {
@@ -2059,7 +2081,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -4199,6 +4221,7 @@
           "Autofac": "7.0.1",
           "Autofac.Extensions.DependencyInjection": "8.0.0",
           "BCrypt.Net-Next": "4.0.3",
+          "Iran.AspNet.CountryDivisions": "2.1.5",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.5",
           "Microsoft.AspNetCore.Authorization": "7.0.5",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
@@ -4376,6 +4399,24 @@
         "lib/netstandard1.0/Humanizer.xml",
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
+        "logo.png"
+      ]
+    },
+    "Iran.AspNet.CountryDivisions/2.1.5": {
+      "sha512": "X1lT0Xy4HDksAO8z6YewhzbweaH7t+Lphtg4cl/w6LCbgttMMEmXGvf7op/xFLv7AsJ6DSyRQRFFTTrcqjemYA==",
+      "type": "package",
+      "path": "iran.aspnet.countrydivisions/2.1.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "content/Data/DataBase/locations.db",
+        "contentFiles/any/netstandard2.0/Data/DataBase/locations.db",
+        "contentFiles/any/netstandard2.1/Data/DataBase/locations.db",
+        "iran.aspnet.countrydivisions.2.1.5.nupkg.sha512",
+        "iran.aspnet.countrydivisions.nuspec",
+        "lib/netstandard2.0/Iran.AspNet.CountryDivisions.dll",
+        "lib/netstandard2.1/Iran.AspNet.CountryDivisions.dll",
         "logo.png"
       ]
     },
@@ -6724,10 +6765,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6750,8 +6791,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
@@ -11366,6 +11408,7 @@
       "Autofac.Extensions.DependencyInjection >= 8.0.0",
       "BCrypt.Net-Next >= 4.0.3",
       "Common >= 1.0.0",
+      "Iran.AspNet.CountryDivisions >= 2.1.5",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.5",
       "Microsoft.AspNetCore.Authorization >= 7.0.5",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.5",
@@ -11449,6 +11492,10 @@
           "BCrypt.Net-Next": {
             "target": "Package",
             "version": "[4.0.3, )"
+          },
+          "Iran.AspNet.CountryDivisions": {
+            "target": "Package",
+            "version": "[2.1.5, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
