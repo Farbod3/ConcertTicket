@@ -35,7 +35,7 @@ public class Ticket : BaseEntity
     public long? ReservationId { get; set; }
     public Reservation? Reservation { get; set; }
 }
-#region Fluent&relations
+    #region Fluent&relations
 public class TicketTypeConfiguration : IEntityTypeConfiguration<Ticket>
 {
     public void Configure(EntityTypeBuilder<Ticket> builder)

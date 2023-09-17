@@ -66,7 +66,10 @@ namespace Data.Migrations
                     b.Property<string>("Days")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("ImageConcert")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ImageHome")
                         .HasColumnType("TEXT");
 
                     b.Property<bool?>("IsActive")
@@ -450,7 +453,8 @@ namespace Data.Migrations
                 {
                     b.HasOne("Entities.City", "City")
                         .WithMany("Concerts")
-                        .HasForeignKey("CityId");
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("City");
                 });

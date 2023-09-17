@@ -7,7 +7,9 @@ namespace Entities;
 
 public class Concert : BaseEntity
 {
-    public string? Image { get; set; }
+    public string? ImageHome { get; set; }
+    public string? ImageConcert { get; set; }
+
     public string? Title { get; set; }
     public string? Location { get; set; }
     public string? CityName { get; set; }
@@ -53,10 +55,12 @@ public class ConcertTypeConfiguration : IEntityTypeConfiguration<Concert>
         //     .HasForeignKey(c => c.SingerId);
         builder.HasOne(g => g.City)
             .WithMany(h => h.Concerts)
-            .HasForeignKey(i => i.CityId);
+            .HasForeignKey(i => i.CityId)
+            .OnDelete(DeleteBehavior.Cascade);
         builder.HasMany(j => j.Tickets)
             .WithOne(k => k.Concert)
-            .HasForeignKey(l => l.ConcertId);
+            .HasForeignKey(l => l.ConcertId)
+            .OnDelete(DeleteBehavior.Cascade);
         builder.HasMany(m => m.Reservations)
             .WithMany(n => n.Concerts);
     }

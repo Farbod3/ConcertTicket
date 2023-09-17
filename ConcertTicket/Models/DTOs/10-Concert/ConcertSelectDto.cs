@@ -5,7 +5,8 @@ namespace DTOs;
 
 public class ConcertSelectDto : BaseDto<Concert,ConcertSelectDto,long>
 {
-    public string? Image { get; set; }
+    public string? ImageHome { get; set; }
+    public string? ImageConcert { get; set; }
     public string? Title { get; set; }
     public string? Location { get; set; }
     public string? CityName { get; set; }

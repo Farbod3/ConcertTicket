@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ConcertTicketDbContext))]
-    [Migration("20230916130657_Initial")]
+    [Migration("20230917134652_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -69,7 +69,10 @@ namespace Data.Migrations
                     b.Property<string>("Days")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("ImageConcert")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ImageHome")
                         .HasColumnType("TEXT");
 
                     b.Property<bool?>("IsActive")
@@ -453,7 +456,8 @@ namespace Data.Migrations
                 {
                     b.HasOne("Entities.City", "City")
                         .WithMany("Concerts")
-                        .HasForeignKey("CityId");
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("City");
                 });

@@ -34,6 +34,18 @@ public class AddConcertController : BaseController
         var concertdto = _mapper.Map<IEnumerable<ConcertSelectDto>>(concert);
         return new JsonResult(concertdto);
     }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ConcertSelectDto>> GetConcertId(int id)
+    {
+        var concert = await _repository.GetByIdAsync(id);
+        if (concert == null)
+        {
+            return NotFound();
+        }
+        var concertDto = _mapper.Map<ConcertSelectDto>(concert);
+        return new JsonResult(concertDto);
+    }
     // [HttpGet]
     // public async 
 

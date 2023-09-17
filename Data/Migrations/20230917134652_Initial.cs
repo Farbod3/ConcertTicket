@@ -213,7 +213,8 @@ namespace Data.Migrations
                 {
                     Id = table.Column<long>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Image = table.Column<string>(type: "TEXT", nullable: true),
+                    ImageHome = table.Column<string>(type: "TEXT", nullable: true),
+                    ImageConcert = table.Column<string>(type: "TEXT", nullable: true),
                     Title = table.Column<string>(type: "TEXT", maxLength: 100, nullable: true),
                     Location = table.Column<string>(type: "TEXT", nullable: true),
                     CityName = table.Column<string>(type: "TEXT", nullable: true),
@@ -230,7 +231,8 @@ namespace Data.Migrations
                         name: "FK_Concert_City_CityId",
                         column: x => x.CityId,
                         principalTable: "City",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

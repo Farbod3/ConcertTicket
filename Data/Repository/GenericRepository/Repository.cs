@@ -196,6 +196,11 @@ namespace Data.Repository.GenericRepository;
         {
             DbContext.Dispose();
         }
+
+        public Task<object> GetByIdAsync(int cancellationToken, CancellationToken cancellationToken1)
+        {
+            throw new NotImplementedException();
+        }
     }
 // public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
 // {

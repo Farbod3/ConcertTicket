@@ -44,5 +44,6 @@ public interface IRepository<TEntity> where TEntity : class
     Task UpdateRangeAsync(IEnumerable<TEntity?> entities, CancellationToken cancellationToken, bool saveNow = true);
     void Dispose();
 
-    
+
+    Task<object> GetByIdAsync(int cancellationToken, CancellationToken cancellationToken1);
 }
